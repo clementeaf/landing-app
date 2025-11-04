@@ -223,7 +223,7 @@ export const HomePage = () => {
           <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2'>
             Automatiza el reclutamiento y todos sus procesos administrativos por WhatsApp con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span>, sin sumar carga a tu equipo
           </p>
-          <button className='mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-4 py-3 sm:py-4 md:py-5 lg:py-2 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[441px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[89px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[44.5px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-xl xl:text-[28px] 2xl:text-[33px] text-[#1677FF] font-semibold'>
+          <button className='flex items-center justify-center mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-6 xl:px-8 py-3 sm:py-4 md:py-5 lg:py-3 xl:py-4 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[220px] xl:w-[250px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[44px] xl:h-[50px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[22px] xl:rounded-[25px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-[#1677FF] font-semibold text-center'>
             Agendar demo
           </button>
         </div>
@@ -347,11 +347,15 @@ export const HomePage = () => {
       </section>
 
       {/* Planes */}
-      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px]'>
-        <p className='text-[65px] text-[#0048BE] font-bold text-center mb-4'>Planes</p>
-        <p className='text-[#828282] text-[30px] font-[100] text-center mb-[100px]'>Elige el plan que se adapta a tu forma de contratar</p>
+      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-0'>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[65px] text-[#0048BE] font-bold text-center mb-3 sm:mb-4 px-4 sm:px-6 lg:px-0'>
+          Planes
+        </h2>
+        <p className='text-[#828282] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[30px] font-[100] text-center mb-6 sm:mb-8 md:mb-12 lg:mb-[100px] px-4 sm:px-6 lg:px-0'>
+          Elige el plan que se adapta a tu forma de contratar
+        </p>
 
-        <div className='flex flex-row gap-8 items-start justify-center w-full'>
+        <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-center w-full px-4 sm:px-6 lg:px-0'>
           <PlanCard
             title="Plan Standard"
             price="$490"

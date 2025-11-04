@@ -90,67 +90,71 @@ export function PlanCard({
   description,
   features,
   additionals,
+  subtext,
   ctaText,
   isPopular = false,
   currencyBadge = '$ USD',
 }: PlanCardProps): ReactElement {
   return (
-    <div className='border-[5px] border-[#B0D1FF] rounded-[30px] p-8 relative w-full w-[656px] h-[861px] flex flex-col min-h-[715px] flex flex-col items-start justify-between' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
+    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] p-6 sm:p-7 lg:p-8 relative w-full lg:w-[620px] xl:w-[656px] h-auto lg:h-[861px] flex flex-col min-h-[600px] sm:min-h-[650px] lg:min-h-[715px] items-start' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
       {isPopular && (
-        <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[3px] border-[#B0D1FF] px-6 py-2 rounded-full'>
-          <span className='text-white text-sm font-semibold'>Mas popular</span>
+        <div className='absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[2px] sm:border-[3px] border-[#B0D1FF] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full'>
+          <span className='text-white text-xs sm:text-sm font-semibold'>Mas popular</span>
         </div>
       )}
 
       {currencyBadge && (
-        <div className='absolute top-6 right-6 bg-[#215FC4]/50 px-3 py-1 rounded-full'>
-          <span className='text-white text-xs font-medium'>{currencyBadge}</span>
+        <div className='absolute top-4 right-4 sm:top-5 sm:right-5 lg:top-6 lg:right-6 bg-[#215FC4]/50 px-2 sm:px-3 py-1 rounded-full'>
+          <span className='text-white text-[10px] sm:text-xs font-medium'>{currencyBadge}</span>
         </div>
       )}
 
-      <div className='flex flex-col justify-start gap-10 h-full items-start'>
-        <div className='flex flex-col gap-4 mt-4'>
-          <h2 className='text-white text-[30px] font-bold'>{title}</h2>
+      <div className='flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 flex-1 items-start w-full'>
+        <div className='flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-4 w-full'>
+          <h2 className='text-white text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-bold'>{title}</h2>
 
           {isRequestQuote ? (
-            <p className='text-[#A5CAFF] text-[40px] font-bold'>Solicitar</p>
+            <p className='text-[#A5CAFF] text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold'>Solicitar</p>
           ) : (
             <div className='flex items-baseline gap-2'>
-              <span className='text-[#A5CAFF] text-[40px] font-bold'>{price}</span>
-              {priceSubtext && <span className='text-white text-xl'>{priceSubtext}</span>}
+              <span className='text-[#A5CAFF] text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold'>{price}</span>
+              {priceSubtext && <span className='text-white text-base sm:text-lg lg:text-xl'>{priceSubtext}</span>}
             </div>
           )}
 
-          <p className='text-[#FFFFFF] text-[18px] h-[46px]'>{description}</p>
+          <p className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] h-auto sm:h-[40px] lg:h-[46px]'>{description}</p>
         </div>
 
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-3 sm:gap-4 w-full flex-1'>
           <div className='flex flex-col gap-2'>
-            <h3 className='text-[#FFFFFF] text-[18px] font-light uppercase'>Funcionalidades</h3>
+            <h3 className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] font-light uppercase'>Funcionalidades</h3>
             <div className='h-[1px] bg-[#FFFFFF]'></div>
-            <ul className='flex flex-col gap-3 mt-2'>
+            <ul className='flex flex-col gap-2 sm:gap-3 mt-2'>
               {features.map((feature, index) => (
-                <li key={index} className='flex items-start gap-3'>
-                  <svg className="w-5 h-5 text-[#1677FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li key={index} className='flex items-start gap-2 sm:gap-3'>
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#1677FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className='text-white text-[18px]'>{feature.text}</span>
+                  <span className='text-white text-sm sm:text-base md:text-lg lg:text-[18px]'>{feature.text}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {additionals && additionals.length > 0 && (
-            <div className='flex flex-col gap-3'>
-              <h3 className='text-[#FFFFFF] text-[18px] font-semibold uppercase'>Adicional (Solicitar)</h3>
+            <div className='flex flex-col gap-2 sm:gap-3'>
+              <h3 className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] font-semibold uppercase'>Adicional (Solicitar)</h3>
               <div className='h-[1px] bg-[#FFFFFF]'></div>
               <div className='flex flex-wrap gap-2'>
                 {additionals.map((additional, index) => (
                   <div
                     key={index}
-                    className='w-[124.65px] h-[78px] bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[10px] flex items-center justify-center p-4 text-[13px] text-[#FFFFFF]'
+                    className='relative flex flex-col items-center justify-center w-[100px] sm:w-[110px] md:w-[120px] lg:w-[124.65px] h-[60px] sm:h-[70px] lg:h-[78px] bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] sm:rounded-[10px] p-2 sm:p-3 lg:p-4'
                   >
-                    {additional.text}
+                    <span className='text-[11px] sm:text-[12px] lg:text-[13px] text-[#FFFFFF] text-center leading-tight'>{additional.text}</span>
+                    {subtext && subtext[index] && (
+                      <span className='text-[9px] sm:text-[10px] lg:text-[11px] text-[#FFFFFF]/70 text-center mt-1'>{subtext[index].text}</span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -160,7 +164,7 @@ export function PlanCard({
       </div>
 
       <button
-        className={`place-self-end align-self-end py-3 px-6 rounded-[30px] w-[172px] h-[60px] font-semibold text-white transition-colors ${isPopular
+        className={`w-full sm:w-[160px] lg:w-[172px] self-end py-2.5 sm:py-3 px-5 sm:px-6 rounded-[24px] sm:rounded-[30px] h-[50px] sm:h-[56px] lg:h-[60px] font-semibold text-sm sm:text-base text-white transition-colors mt-4 sm:mt-6 lg:mt-8 ${isPopular
             ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
             : 'bg-[#FFFFFF] text-[#0048BE]'
           }`}
