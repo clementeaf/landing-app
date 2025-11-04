@@ -21,7 +21,6 @@ import statisticsData from '@/data/statistics.json';
 import { useState, type ReactElement } from 'react';
 import sysConected from '@/assets/con-sys.png';
 import starsIcon from '@/assets/stars2.png';
-import chartIcon from '@/assets/chart.png';
 import performanceChart from '@/assets/performance-chart.png';
 
 const icons = [goingUp, clock, persons, chat, clock, circles];
