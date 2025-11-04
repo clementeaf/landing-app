@@ -233,41 +233,36 @@ export const HomePage = () => {
       </section>
 
       {/* Porque Hoktus?*/} {/* Responsive */}
-      <section className='flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
-        <button className='w-full sm:w-auto sm:min-w-[280px] lg:w-[318px] h-[56px] sm:h-[64px] lg:h-[68px] rounded-[28px] sm:rounded-[32px] lg:rounded-[34px] bg-[#ECF4FF] text-[#1677FF] text-base sm:text-lg lg:text-[20px] font-[100] my-8 sm:my-12 md:my-16 lg:my-[100px]'>
+      <section className='flex flex-col items-center justify-center gap-6 py-[50px]'>
+        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-base'>
           Porque Hoktus
         </button>
-        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold text-[#012257] text-center px-4 sm:px-6 lg:px-0'>
+        <p className='text-[40px] font-bold text-[#012257] text-center px-4'>
           El camino inteligente para escalar tu reclutamiento
-        </h2>
-        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[30px] font-[100] text-[#A8A8A8] text-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] py-4 sm:py-6 md:py-8 lg:py-10 px-4 sm:px-6'>
-          Hoktus transforma la forma en que reclutas personal operativo con IA conversacional, automatizando entrevistas y validación documental por WhatsApp. Recluta más rápido, sin sobrecargar a tu equipo.
         </p>
 
         {/* Images content */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-[250px] px-0 sm:px-2 lg:px-8 py-8 sm:py-12 md:py-16 w-full overflow-x-hidden lg:overflow-visible">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden lg:overflow-visible h-auto mt-5 gap-[150px]">
           {/* Left Section - Woman with UI elements */}
-          <div className="relative flex-shrink-0 w-full sm:w-[90%] md:w-[80%] lg:w-auto pr-0 sm:pr-[80px] md:pr-[100px] lg:pr-0" style={{ overflow: 'visible' }}>
-            <div className="h-[280px] sm:h-[350px] md:h-[420px] lg:h-[527px] w-full sm:w-[90%] md:w-[85%] lg:w-[604px] relative rounded-lg overflow-visible bg-[#FAFCFF] mx-auto">
+          <div className="relative w-auto min-w-[425px]" style={{ overflow: 'visible' }}>
               <img
                 src={person}
                 alt="Persona usando Hoktus"
-                className="w-full h-full object-contain sm:object-cover rounded-lg"
+                className="w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] object-contain sm:object-cover"
               />
 
               {/* Floating UI Element 1 - Performance */}
               <img 
                 src={performanceChart} 
                 alt="Performance" 
-                className="absolute top-[50px] sm:top-[70px] md:top-[100px] right-0 sm:right-[-60px] md:right-[-80px] lg:right-[-150px] z-10 w-[100px] sm:w-[160px] md:w-[220px] lg:w-[300px] object-cover hidden sm:block" 
+                className="absolute top-0 left-[0px] w-[170px] sm:w-[250px] sm:left-[300px] object-cover overflow-visible" 
               />
 
               {/* Floating UI Element 2 - Postulante Chat */}
-              <div className="absolute bottom-[10px] sm:bottom-[15px] md:bottom-20 right-0 sm:right-[-80px] md:right-[-110px] lg:right-[-190px] z-10 w-[100px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF] hidden sm:block">
+              <div className="absolute top-4 right-4 sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[100px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF]">
                 <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
                 <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
               </div>
-            </div>
           </div>
 
           <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
