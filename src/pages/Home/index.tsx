@@ -13,7 +13,7 @@ import persons from '@/assets/persons.png';
 import chat from '@/assets/chat.png';
 import circles from '@/assets/circles.png';
 import whatsapp from '@/assets/whatsapp.png';
-import chatPersonIcon from '@/assets/chat-person-icon.png';
+import chatSimulation from '@/assets/conversation.png';
 import person2 from '@/assets/person2.png';
 import stars from '@/assets/stars.png';
 import { Card, StatistisCard, PlanCard } from '@/components/common/Card';
@@ -290,11 +290,10 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] flex flex-row items-center justify-between p-12 relative overflow-hidden mt-[120px]'>
-        {/* Left Content */}
-        <div className='flex flex-col gap-6 z-10 max-w-[500px]'>
-          <img src={stars} alt="Stars icon" className='w-8 h-8 mb-4' />
-          <h2 className='text-[#1677FF] text-5xl font-bold leading-tight'>
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] min-h-[450px] flex items-center relative overflow-visible mt-[120px]'>
+        <img src={stars} alt="Stars icon" className='w-[80px] absolute top-10 left-10' />
+        <div className='flex flex-col absolute top-20 left-[200px] w-[685px] gap-20'>
+          <h2 className='text-[#1677FF] text-5xl font-bold'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
           </h2>
           <button className='bg-[#1677FF] text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-3 w-fit hover:bg-[#0050CC] transition-colors'>
@@ -305,47 +304,16 @@ export const HomePage = () => {
           </button>
         </div>
 
-        {/* Middle Content - Chat Simulation */}
-        <div className='flex flex-col gap-4 z-10'>
-          {/* Chat Bubble 1 - Marcelo Rojas */}
-          <div className='bg-white rounded-2xl p-4 shadow-lg max-w-[350px] flex gap-3'>
-            <img src={chatPersonIcon} alt="Marcelo Rojas" className='w-10 h-10 rounded-full flex-shrink-0' />
-            <div className='flex flex-col'>
-              <p className='font-semibold text-sm text-gray-800'>Marcelo Rojas</p>
-              <p className='text-sm text-gray-600 mt-1'>
-                Hola! quiero saber más sobre la vacante de Guardia...
-              </p>
-            </div>
-          </div>
+        <img src={chatSimulation} alt="Chat Simulation" className='w-[300px] object-cover absolute top-[200px] left-[600px]' />
 
-          {/* Chat Bubble 2 - Asistente AI */}
-          <div className='bg-white rounded-2xl p-4 shadow-lg max-w-[350px] flex gap-3 ml-8'>
-            <img src={chatPersonIcon} alt="Asistente AI" className='w-10 h-10 rounded-full flex-shrink-0' />
-            <div className='flex flex-col'>
-              <p className='font-semibold text-sm text-gray-800'>Asistente AI</p>
-              <p className='text-sm text-gray-600 mt-1'>
-                Hola Marcelo! por supuesto, para entregarte la información...
-              </p>
-            </div>
-          </div>
-
-          {/* Stylized Icon below chat */}
-          <div className='ml-12 mt-2'>
-            <img src={circles} alt="Stylized icon" className='w-8 h-8 opacity-50' />
-          </div>
-        </div>
-
-        {/* Right Content - Woman and WhatsApp Logo */}
-        <div className='relative z-10 flex items-center justify-end'>
-          <div className='relative'>
-            <img src={whatsapp} alt="WhatsApp" className='absolute -top-8 -right-8 w-24 h-24 z-20' />
-            <img src={person2} alt="Professional woman" className='w-80 h-auto object-contain' />
-          </div>
+        <div className='absolute right-0 z-10 overflow-visible'>
+          <img src={whatsapp} alt="WhatsApp" className='absolute top-[150px] right-[150px] w-[57px] z-10' />
+          <img src={person2} alt="Professional woman" className='w-[751px] h-[551px] object-contain z-[9999] bottom-[50px] relative' />
         </div>
       </section>
 
       {/* Hero: Que dicen las empresas sobre Hoktus */}
-      <section className='bg-[#EBF3FF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px] px-8'>
+      <section className='w-[90%] flex flex-col items-center justify-center py-[120px] px-8 mt-10'>
         {/* Testimonio Badge */}
         <div className='bg-[#EBF3FF] border border-[#1677FF]/20 px-6 py-2 rounded-full mb-8'>
           <span className='text-[#1677FF] text-sm font-semibold'>Testimonio</span>
