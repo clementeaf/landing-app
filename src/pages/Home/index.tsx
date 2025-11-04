@@ -114,38 +114,119 @@ function FAQList(): ReactElement {
 }
 
 export const HomePage = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
   return (
     <div className="flex flex-col items-center w-full">
       {/* Gradient header + Navbar*/}
-      <section className="flex flex-col bg-gradient-to-b from-[#01122D] to-[#094FBE] h-full w-full flex items-center justify-center py-6">
-        <div className='w-full flex flex-col items-center justify-center'>
-          <nav className="flex justify-between items-center px-6 w-[90%] h-[88px] rounded-[52.5px] bg-[#FBFBFB]/10 text-[#FFFFFF] ">
-            <div className="flex items-center gap-4">
-              <img src={logo} alt="Hoktus" className="w-[32.5px]" />
-              <img src={title} alt="Hoktus" className="w-[134px] h-[29.3]" />
+      <section className="flex flex-col bg-gradient-to-b from-[#01122D] to-[#094FBE] min-h-screen w-full items-center justify-between py-4 sm:py-6 md:py-8">
+        <div className='w-full flex flex-col items-center justify-center px-4 sm:px-0 relative'>
+          <nav className="flex justify-between items-center px-3 sm:px-6 w-full sm:w-[90%] h-[56px] sm:h-[72px] md:h-[88px] rounded-[20px] sm:rounded-[40px] md:rounded-[52.5px] bg-[#FBFBFB]/10 text-[#FFFFFF] relative z-50">
+            {/* Logo Section */}
+            <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+              <img src={logo} alt="Hoktus" className="w-[20px] sm:w-[28px] md:w-[32.5px]" />
+              <img src={title} alt="Hoktus" className="w-[85px] sm:w-[110px] md:w-[134px] h-auto" />
             </div>
 
-            <div className="flex items-center gap-10 font-[100] text-[20px] text-[#FFFFFF]">
-              <p>Funcionalidades</p>
-              <p>Industrias</p>
-              <p>Planes</p>
-              <p>Contacto</p>
+            {/* Desktop Navigation - Hidden en móvil y tablet */}
+            <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-10 font-[100] text-sm lg:text-base xl:text-[20px] text-[#FFFFFF]">
+              <p className="cursor-pointer hover:text-[#1677FF] transition-colors whitespace-nowrap">Funcionalidades</p>
+              <p className="cursor-pointer hover:text-[#1677FF] transition-colors whitespace-nowrap">Industrias</p>
+              <p className="cursor-pointer hover:text-[#1677FF] transition-colors whitespace-nowrap">Planes</p>
+              <p className="cursor-pointer hover:text-[#1677FF] transition-colors whitespace-nowrap">Contacto</p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <img src={chile} alt="Chile" className="w-[40px]" />
-              <button className='px-4 py-2 w-[178px] h-[54px] rounded-[27px] bg-[#00122D] border border-[#91BBFF]'>Iniciar Sesión</button>
-              <button className='px-4 py-2 w-[178px] h-[54px] rounded-[27px] bg-[#FFFFFF] text-[#1677FF]'>Agendar demo</button>
+            {/* Desktop Actions - Hidden en móvil y tablet */}
+            <div className="hidden md:flex items-center gap-2 lg:gap-3 xl:gap-4">
+              <img src={chile} alt="Chile" className="w-[28px] lg:w-[32px] xl:w-[40px] hidden lg:block" />
+              <button className='px-3 lg:px-4 py-2 w-[120px] lg:w-[140px] xl:w-[178px] h-[40px] lg:h-[44px] xl:h-[54px] rounded-[20px] lg:rounded-[22px] xl:rounded-[27px] bg-[#00122D] border border-[#91BBFF] text-xs lg:text-sm xl:text-base whitespace-nowrap'>Iniciar Sesión</button>
+              <button className='px-3 lg:px-4 py-2 w-[120px] lg:w-[140px] xl:w-[178px] h-[40px] lg:h-[44px] xl:h-[54px] rounded-[20px] lg:rounded-[22px] xl:rounded-[27px] bg-[#FFFFFF] text-[#1677FF] text-xs lg:text-sm xl:text-base whitespace-nowrap'>Agendar demo</button>
             </div>
+
+            {/* Mobile Menu Button - Visible solo en móvil */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden flex flex-col justify-center items-center w-7 h-7 gap-1.5 z-50"
+              aria-label="Toggle menu"
+            >
+              <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`w-5 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </button>
           </nav>
+
+          {/* Mobile Menu Overlay - Visible solo en móvil */}
+          {isMobileMenuOpen && (
+            <>
+              {/* Backdrop */}
+              <div 
+                className="md:hidden fixed inset-0 bg-black/50 z-[45] transition-opacity duration-300"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              {/* Menu Panel */}
+              <div className="md:hidden fixed top-[80px] left-4 right-4 rounded-[20px] bg-[#FBFBFB]/10 backdrop-blur-sm p-4 transition-all duration-300 ease-in-out z-50 shadow-lg max-w-[395px]">
+                <div className="flex flex-col gap-3 mb-4">
+                  <p 
+                    className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Funcionalidades
+                  </p>
+                  <p 
+                    className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Industrias
+                  </p>
+                  <p 
+                    className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Planes
+                  </p>
+                  <p 
+                    className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contacto
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2.5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <img src={chile} alt="Chile" className="w-[28px] h-[28px]" />
+                  </div>
+                  <button 
+                    className='w-full px-4 py-3 rounded-[20px] bg-[#00122D] border border-[#91BBFF] text-white text-base font-medium'
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    style={{ width: '100%', boxSizing: 'border-box' }}
+                  >
+                    Iniciar Sesión
+                  </button>
+                  <button 
+                    className='w-full px-4 py-3 rounded-[20px] bg-[#FFFFFF] text-[#1677FF] text-base font-medium'
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    style={{ width: '100%', boxSizing: 'border-box' }}
+                  >
+                    Agendar demo
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
-        <div className='w-[75%] flex flex-col gap-4 text-center text-white items-center mt-[100px]'>
-          <p className='text-[85px] font-bold'>Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos, no semanas</p>
-          <p className='font-[100] text-[33px] max-w-[1100px] mt-2'>Automatiza el reclutamiento y todos sus procesos administrativos por WhatsApp con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span>, sin sumar carga a tu equipo</p>
+        {/* Hero Content - Centrado verticalmente con mejor distribución */}
+        <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-8 text-center text-white items-center flex-1 justify-center px-4 sm:px-6'>
+          <h1 className='text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2'>
+            Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos, no semanas
+          </h1>
+          <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2'>
+            Automatiza el reclutamiento y todos sus procesos administrativos por WhatsApp con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span>, sin sumar carga a tu equipo
+          </p>
+          <button className='mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-4 py-3 sm:py-4 md:py-5 lg:py-2 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[441px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[89px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[44.5px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-xl xl:text-[28px] 2xl:text-[33px] text-[#1677FF] font-semibold'>
+            Agendar demo
+          </button>
         </div>
-
-        <button className='my-[89px] px-4 py-2 w-[441px] h-[89px] rounded-[44.5px] bg-[#FFFFFF] text-[33px] text-[#1677FF]'>Agendar demo</button>
       </section>
 
       {/* Porque Hoktus?*/}
