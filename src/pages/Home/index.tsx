@@ -117,7 +117,7 @@ export const HomePage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full overflow-x-hidden">
       {/* Gradient header + Navbar*/} {/* Responsive */}
       <section className="flex flex-col bg-gradient-to-b from-[#01122D] to-[#094FBE] min-h-screen w-full items-center justify-between py-4 sm:py-6 md:py-8">
         <div className='w-full flex flex-col items-center justify-center px-4 sm:px-0 relative'>
@@ -216,14 +216,17 @@ export const HomePage = () => {
         </div>
 
         {/* Hero Content - Centrado verticalmente con mejor distribución */}
-        <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-8 text-center text-white items-center flex-1 justify-center px-4 sm:px-6'>
+        <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-8 sm:gap-5 md:gap-6 lg:gap-8 text-center text-white items-center flex-1 justify-center px-4 sm:px-6'>
           <h1 className='text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2'>
             Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos, no semanas
           </h1>
-          <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2'>
+          <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 block md:hidden'>
+            Automatiza el reclutamiento con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span> sin sumar carga a tu equipo
+          </p>
+          <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 hidden md:block'>
             Automatiza el reclutamiento y todos sus procesos administrativos por WhatsApp con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span>, sin sumar carga a tu equipo
           </p>
-          <button className='flex items-center justify-center mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-6 xl:px-8 py-3 sm:py-4 md:py-5 lg:py-3 xl:py-4 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[220px] xl:w-[250px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[44px] xl:h-[50px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[22px] xl:rounded-[25px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-[#1677FF] font-semibold text-center'>
+          <button className='flex items-center justify-center mt-6 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-6 xl:px-6 py-3 sm:py-4 md:py-5 lg:py-3 xl:py-4 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[220px] xl:w-[250px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[44px] xl:h-[50px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[22px] xl:rounded-[25px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-[#1677FF] font-semibold text-center'>
             Agendar demo
           </button>
         </div>
@@ -242,9 +245,9 @@ export const HomePage = () => {
         </p>
 
         {/* Images content */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-[250px] px-0 sm:px-2 lg:px-8 py-8 sm:py-12 md:py-16 w-full overflow-visible">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-[250px] px-0 sm:px-2 lg:px-8 py-8 sm:py-12 md:py-16 w-full overflow-x-hidden lg:overflow-visible">
           {/* Left Section - Woman with UI elements */}
-          <div className="relative flex-shrink-0 w-full sm:w-[90%] md:w-[80%] lg:w-auto pr-[60px] sm:pr-[80px] md:pr-[100px] lg:pr-0" style={{ overflow: 'visible' }}>
+          <div className="relative flex-shrink-0 w-full sm:w-[90%] md:w-[80%] lg:w-auto pr-0 sm:pr-[80px] md:pr-[100px] lg:pr-0" style={{ overflow: 'visible' }}>
             <div className="h-[280px] sm:h-[350px] md:h-[420px] lg:h-[527px] w-full sm:w-[90%] md:w-[85%] lg:w-[604px] relative rounded-lg overflow-visible bg-[#FAFCFF] mx-auto">
               <img
                 src={person}
@@ -256,11 +259,11 @@ export const HomePage = () => {
               <img 
                 src={performanceChart} 
                 alt="Performance" 
-                className="absolute top-[50px] sm:top-[70px] md:top-[100px] right-[-50px] sm:right-[-60px] md:right-[-80px] lg:right-[-150px] z-10 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[300px] object-cover" 
+                className="absolute top-[50px] sm:top-[70px] md:top-[100px] right-0 sm:right-[-60px] md:right-[-80px] lg:right-[-150px] z-10 w-[100px] sm:w-[160px] md:w-[220px] lg:w-[300px] object-cover hidden sm:block" 
               />
 
               {/* Floating UI Element 2 - Postulante Chat */}
-              <div className="absolute bottom-[10px] sm:bottom-[15px] md:bottom-20 right-[-60px] sm:right-[-80px] md:right-[-110px] lg:right-[-190px] z-10 w-[120px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF]">
+              <div className="absolute bottom-[10px] sm:bottom-[15px] md:bottom-20 right-0 sm:right-[-80px] md:right-[-110px] lg:right-[-190px] z-10 w-[100px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF] hidden sm:block">
                 <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
                 <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
               </div>
@@ -407,42 +410,42 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] h-[450px] flex items-center relative overflow-visible mt-[120px]'>
-        <img src={stars} alt="Stars icon" className='w-[80px] absolute top-10 left-10 z-10' />
-        <div className='flex flex-col absolute top-20 left-[200px] w-[685px] gap-20 z-10'>
-          <h2 className='text-[#1677FF] text-5xl font-bold'>
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] w-full sm:w-[95%] lg:w-[90%] h-auto sm:h-[450px] min-h-[400px] sm:min-h-[450px] flex items-center relative overflow-hidden lg:overflow-visible mt-8 sm:mt-12 md:mt-16 lg:mt-[120px] px-4 sm:px-6 lg:px-0'>
+        <img src={stars} alt="Stars icon" className='w-[40px] sm:w-[60px] lg:w-[80px] absolute top-4 sm:top-6 lg:top-10 left-4 sm:left-6 lg:left-10 z-10' />
+        <div className='flex flex-col absolute top-12 sm:top-16 lg:top-20 left-4 sm:left-8 md:left-12 lg:left-[200px] w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] md:w-[calc(100%-6rem)] lg:w-[685px] gap-8 sm:gap-12 lg:gap-20 z-10'>
+          <h2 className='text-[#1677FF] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
           </h2>
-          <button className='bg-[#1677FF] text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-3 w-fit hover:bg-[#0050CC] transition-colors'>
+          <button className='bg-[#1677FF] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2 sm:gap-3 w-fit hover:bg-[#0050CC] transition-colors'>
             Probar Hoktus
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
 
-        <img src={chatSimulation} alt="Chat Simulation" className='w-[300px] object-cover absolute top-[200px] left-[600px] z-10' />
+        <img src={chatSimulation} alt="Chat Simulation" className='w-[150px] sm:w-[200px] md:w-[250px] lg:w-[300px] object-cover absolute top-[250px] sm:top-[280px] md:top-[200px] left-1/2 sm:left-auto sm:right-4 md:right-8 lg:left-[600px] transform -translate-x-1/2 sm:translate-x-0 z-10 hidden sm:block' />
 
-        <div className='absolute right-0 bottom-0 z-10'>
+        <div className='absolute right-0 bottom-0 z-10 hidden lg:block'>
           <img src={whatsapp} alt="WhatsApp" className='absolute top-[150px] right-[150px] w-[57px] z-20' />
           <img src={person2} alt="Professional woman" className='w-[600px] h-auto object-contain relative bottom-0' />
         </div>
       </section>
 
       {/* Hero: Que dicen las empresas sobre Hoktus */}
-      <section className='w-[90%] flex flex-col items-center justify-center py-[120px] px-8 mt-10'>
+      <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10'>
         {/* Testimonio Badge */}
-        <div className='bg-[#EBF3FF] px-6 py-2 rounded-full mb-8'>
-          <span className='text-[#1677FF] text-sm font-light'>Testimonio</span>
+        <div className='bg-[#EBF3FF] px-4 sm:px-6 py-2 rounded-full mb-6 sm:mb-8'>
+          <span className='text-[#1677FF] text-xs sm:text-sm font-light'>Testimonio</span>
         </div>
 
         {/* Main Title */}
-        <h2 className='text-[#05234F] text-5xl font-bold text-center mb-12 max-w-[800px] w-[800px]'>
+        <h2 className='text-[#05234F] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-12 max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] w-full px-4'>
           ¿Qué están diciendo las empresas sobre Hoktus?
         </h2>
 
         {/* Testimonial Text */}
-        <p className='text-[#001844] text-[24px] text-center max-w-[690px] mb-12 leading-relaxed'>
+        <p className='text-[#001844] text-base sm:text-lg md:text-xl lg:text-[24px] text-center max-w-full sm:max-w-[600px] md:max-w-[690px] mb-6 sm:mb-8 md:mb-12 leading-relaxed px-4'>
           Hoktus es genial. Antes, contratar y validar conductores y personal de faena era un dolor de cabeza. Ahora, el proceso es súmamente rápido. Nos olvidamos de revisar mil documentos y nos enfocamos en hacer crecer el negocio.
         </p>
 
@@ -480,7 +483,7 @@ export const HomePage = () => {
         </h2>
 
         {/* FAQ List */}
-        <div className='w-full flex flex-col items-center justify-center w-[900px]'>
+        <div className='w-full sm:w-[95%] md:w-[90%] lg:w-[900px] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-0'>
           <FAQList />
         </div>
 
@@ -495,28 +498,28 @@ export const HomePage = () => {
       </section>
 
       {/* Hero - Footer: ¿Listo para automatizar tus procesos de forma conversacional? */}
-      <section className='bg-[#02193B] rounded-t-[80px] w-full flex flex-col items-center justify-center py-[20px]'>
+      <section className='bg-[#02193B] rounded-t-[20px] sm:rounded-t-[40px] md:rounded-t-[60px] lg:rounded-t-[80px] w-full flex flex-col items-center justify-center py-4 sm:py-5 lg:py-[20px]'>
         {/* Top CTA Section */}
-        <div className='w-[90%] h-[242px] flex flex-row items-center justify-between border-b border-[#FFFFFF]/10'>
-          <h2 className='text-white text-5xl font-bold max-w-[733px]'>
+        <div className='w-full sm:w-[95%] lg:w-[90%] h-auto sm:h-[242px] min-h-[200px] sm:min-h-[242px] flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between border-b border-[#FFFFFF]/10 px-4 sm:px-6 lg:px-0 py-6 sm:py-0 gap-6 sm:gap-0'>
+          <h2 className='text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold max-w-full sm:max-w-[500px] md:max-w-[600px] lg:max-w-[733px] text-center sm:text-left'>
             ¿LISTO PARA AUTOMATIZAR TUS PROCESOS DE FORMA CONVERSACIONAL?
           </h2>
-          <div className='flex flex-col items-end gap-[30px]'>
-            <div className='flex flex-row items-center gap-4 h-[50px]'>
-              <div className='flex flex-col items-end'>
-                <p className='text-white text-[23.36px]'>AI for Hiring</p>
-                <p className='text-white text-[23.36px]'>One conversation. <span className='italic'>One hire</span>.</p>
+          <div className='flex flex-col items-center sm:items-end gap-4 sm:gap-[30px]'>
+            <div className='flex flex-row items-center gap-2 sm:gap-4 h-auto sm:h-[50px]'>
+              <div className='flex flex-col items-center sm:items-end'>
+                <p className='text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>AI for Hiring</p>
+                <p className='text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>One conversation. <span className='italic'>One hire</span>.</p>
               </div>
-              <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[50px]' />
+              <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[30px] sm:h-[40px] lg:h-[50px]' />
             </div>
-            <button className='bg-white text-[#000E2] h-[46px] w-[175px] rounded-[24.5px] flex items-center justify-center font-normaltext-lg mt-10'>
+            <button className='bg-white text-[#000E2] h-[40px] sm:h-[46px] w-[160px] sm:w-[175px] rounded-[24.5px] flex items-center justify-center font-normal text-sm sm:text-base lg:text-lg mt-0 sm:mt-10'>
               Agendar reunión
             </button>
           </div>
         </div>
 
         {/* Main Footer Content */}
-        <div className='w-[90%] flex flex-row  items-start justify-between py-[20px] border-b border-[#FFFFFF]/10 gap-12'>
+        <div className='w-full sm:w-[95%] lg:w-[90%] flex flex-col sm:flex-row items-start justify-between py-4 sm:py-5 lg:py-[20px] border-b border-[#FFFFFF]/10 gap-6 sm:gap-8 lg:gap-12 px-4 sm:px-6 lg:px-0'>
           {/* Hoktus Info */}
           <div className='flex flex-col gap-6 max-w-[300px] items-start justify-start'>
             <div className='flex flex-row items-center gap-3'>
@@ -568,7 +571,7 @@ export const HomePage = () => {
         </div>
 
         {/* Bottom Copyright Section */}
-        <div className='w-[90%] flex flex-row items-center justify-between py-8'>
+        <div className='w-full sm:w-[95%] lg:w-[90%] flex flex-col sm:flex-row items-center justify-center sm:justify-between py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-0 gap-4 sm:gap-0'>
           <p className='text-white text-sm text-light'>
             Hoktus Inc. y sus subsidiarias - Todos los derechos reservados
           </p>
