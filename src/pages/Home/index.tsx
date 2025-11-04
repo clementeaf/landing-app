@@ -22,7 +22,8 @@ import { useState, type ReactElement } from 'react';
 import sysConected from '@/assets/con-sys.png';
 import starsIcon from '@/assets/stars2.png';
 import performanceChart from '@/assets/performance-chart.png';
-
+import matias from '@/assets/maatias.png';
+import reciclapp from '@/assets/reciclapp.png';
 const icons = [goingUp, clock, persons, chat, clock, circles];
 
 interface FAQItemProps {
@@ -315,41 +316,38 @@ export const HomePage = () => {
       {/* Hero: Que dicen las empresas sobre Hoktus */}
       <section className='w-[90%] flex flex-col items-center justify-center py-[120px] px-8 mt-10'>
         {/* Testimonio Badge */}
-        <div className='bg-[#EBF3FF] border border-[#1677FF]/20 px-6 py-2 rounded-full mb-8'>
-          <span className='text-[#1677FF] text-sm font-semibold'>Testimonio</span>
+        <div className='bg-[#EBF3FF] px-6 py-2 rounded-full mb-8'>
+          <span className='text-[#1677FF] text-sm font-light'>Testimonio</span>
         </div>
 
         {/* Main Title */}
-        <h2 className='text-[#05234F] text-5xl font-bold text-center mb-12 max-w-[900px]'>
+        <h2 className='text-[#05234F] text-5xl font-bold text-center mb-12 max-w-[800px] w-[800px]'>
           ¿Qué están diciendo las empresas sobre Hoktus?
         </h2>
 
         {/* Testimonial Text */}
-        <p className='text-[#888888] text-xl text-center max-w-[70%] mb-12 leading-relaxed'>
+        <p className='text-[#001844] text-[24px] text-center max-w-[690px] mb-12 leading-relaxed'>
           Hoktus es genial. Antes, contratar y validar conductores y personal de faena era un dolor de cabeza. Ahora, el proceso es súmamente rápido. Nos olvidamos de revisar mil documentos y nos enfocamos en hacer crecer el negocio.
         </p>
 
         {/* Profile Picture */}
         <div className='mb-6'>
           <img
-            src={person2}
+            src={matias}
             alt="Matías Romero"
             className='w-24 h-24 rounded-full object-cover border-2 border-[#1677FF]/20'
           />
         </div>
 
         {/* Name and Title */}
-        <div className='flex flex-col items-center gap-2 mb-8'>
-          <p className='text-[#1677FF] text-2xl font-bold'>Matías Romero</p>
-          <p className='text-[#888888] text-lg'>Co-fundador</p>
+        <div className='flex items-center gap-2 mb-8'>
+          <p className='text-[#1677FF] text-[20px] font-semibold'>Matías Romero, </p>
+          <p className='text-[#1677FF] text-[20px] font-light'>Co-fundador</p>
         </div>
 
         {/* Company Logo */}
         <div className='flex items-center gap-2'>
-          <span className='text-black text-2xl font-bold'>RECICLAPP</span>
-          <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
-          </svg>
+          <img src={reciclapp} alt="Reciclapp" className='w-[125px] h-[16px]' />
         </div>
       </section>
 
