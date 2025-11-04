@@ -291,7 +291,7 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] h-[450px] flex items-center relative overflow-hidden mt-[120px]'>
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] h-[450px] flex items-center relative overflow-visible mt-[120px]'>
         <img src={stars} alt="Stars icon" className='w-[80px] absolute top-10 left-10 z-10' />
         <div className='flex flex-col absolute top-20 left-[200px] w-[685px] gap-20 z-10'>
           <h2 className='text-[#1677FF] text-5xl font-bold'>
