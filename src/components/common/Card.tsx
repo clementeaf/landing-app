@@ -66,6 +66,7 @@ interface PlanCardProps {
   ctaText: string;
   isPopular?: boolean;
   currencyBadge?: string;
+  subtext?: PlanAdditional[];
 }
 
 /**
@@ -91,76 +92,78 @@ export function PlanCard({
   additionals,
   ctaText,
   isPopular = false,
-  currencyBadge = '$ USD'
+  currencyBadge = '$ USD',
 }: PlanCardProps): ReactElement {
   return (
-    <div className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[30px] p-8 relative w-full max-w-[500px] flex flex-col min-h-[715px]'>
+    <div className='border-[5px] border-[#B0D1FF] rounded-[30px] p-8 relative w-full w-[656px] h-[861px] flex flex-col min-h-[715px] flex flex-col items-start justify-between' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
       {isPopular && (
-        <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#01122D] px-6 py-2 rounded-full'>
+        <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[3px] border-[#B0D1FF] px-6 py-2 rounded-full'>
           <span className='text-white text-sm font-semibold'>Mas popular</span>
         </div>
       )}
 
       {currencyBadge && (
-        <div className='absolute top-6 right-6 bg-gray-200 px-3 py-1 rounded-full'>
-          <span className='text-gray-700 text-xs font-medium'>{currencyBadge}</span>
+        <div className='absolute top-6 right-6 bg-[#215FC4]/50 px-3 py-1 rounded-full'>
+          <span className='text-white text-xs font-medium'>{currencyBadge}</span>
         </div>
       )}
 
-      <div className='flex flex-col gap-4 mt-4'>
-        <h2 className='text-white text-3xl font-bold'>{title}</h2>
-        
-        {isRequestQuote ? (
-          <p className='text-white text-4xl font-bold'>Solicitar</p>
-        ) : (
-          <div className='flex items-baseline gap-2'>
-            <span className='text-white text-4xl font-bold'>{price}</span>
-            {priceSubtext && <span className='text-white text-xl'>{priceSubtext}</span>}
-          </div>
-        )}
+      <div className='flex flex-col justify-start gap-10 h-full items-start'>
+        <div className='flex flex-col gap-4 mt-4'>
+          <h2 className='text-white text-[30px] font-bold'>{title}</h2>
 
-        <p className='text-gray-400 text-sm'>{description}</p>
-      </div>
+          {isRequestQuote ? (
+            <p className='text-[#A5CAFF] text-[40px] font-bold'>Solicitar</p>
+          ) : (
+            <div className='flex items-baseline gap-2'>
+              <span className='text-[#A5CAFF] text-[40px] font-bold'>{price}</span>
+              {priceSubtext && <span className='text-white text-xl'>{priceSubtext}</span>}
+            </div>
+          )}
 
-      <div className='mt-8 flex flex-col gap-4'>
-        <div className='flex flex-col gap-2'>
-          <h3 className='text-gray-400 text-xs font-semibold uppercase'>Funcionalidades</h3>
-          <div className='h-px bg-gray-600'></div>
-          <ul className='flex flex-col gap-3 mt-2'>
-            {features.map((feature, index) => (
-              <li key={index} className='flex items-start gap-3'>
-                <svg className="w-5 h-5 text-[#1677FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className='text-white text-sm'>{feature.text}</span>
-              </li>
-            ))}
-          </ul>
+          <p className='text-[#FFFFFF] text-[18px] h-[46px]'>{description}</p>
         </div>
 
-        {additionals && additionals.length > 0 && (
-          <div className='flex flex-col gap-3 mt-4'>
-            <h3 className='text-gray-400 text-xs font-semibold uppercase'>Adicional (Solicitar)</h3>
-            <div className='flex flex-wrap gap-2'>
-              {additionals.map((additional, index) => (
-                <button
-                  key={index}
-                  className='px-3 py-1.5 border border-gray-400 rounded-lg text-white text-xs hover:bg-gray-700 transition-colors'
-                >
-                  {additional.text}
-                </button>
+        <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-2'>
+            <h3 className='text-[#FFFFFF] text-[18px] font-light uppercase'>Funcionalidades</h3>
+            <div className='h-[1px] bg-[#FFFFFF]'></div>
+            <ul className='flex flex-col gap-3 mt-2'>
+              {features.map((feature, index) => (
+                <li key={index} className='flex items-start gap-3'>
+                  <svg className="w-5 h-5 text-[#1677FF] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className='text-white text-[18px]'>{feature.text}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        )}
+
+          {additionals && additionals.length > 0 && (
+            <div className='flex flex-col gap-3'>
+              <h3 className='text-[#FFFFFF] text-[18px] font-semibold uppercase'>Adicional (Solicitar)</h3>
+              <div className='h-[1px] bg-[#FFFFFF]'></div>
+              <div className='flex flex-wrap gap-2'>
+                {additionals.map((additional, index) => (
+                  <div
+                    key={index}
+                    className='w-[124.65px] h-[78px] bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[10px] flex items-center justify-center p-4 text-[13px] text-[#FFFFFF]'
+                  >
+                    {additional.text}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <button
-        className={`mt-8 py-3 px-6 rounded-lg font-semibold text-white transition-colors ${
-          isPopular
-            ? 'bg-[#01122D] hover:bg-[#00173B]'
-            : 'bg-[#1677FF] hover:bg-[#0050CC]'
-        }`}
+        className={`place-self-end align-self-end py-3 px-6 rounded-[30px] w-[172px] h-[60px] font-semibold text-white transition-colors ${isPopular
+            ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
+            : 'bg-[#FFFFFF] text-[#0048BE]'
+          }`}
       >
         {ctaText}
       </button>

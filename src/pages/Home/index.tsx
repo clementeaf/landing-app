@@ -235,8 +235,8 @@ export const HomePage = () => {
 
       {/* Planes */}
       <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px]'>
-        <p className='text-[65px] text-[#05234F] font-bold text-center mb-4'>Planes</p>
-        <p className='text-[#888888] text-[35px] font-[100] text-center mb-[100px]'>Elige el plan que se adapta a tu forma de contratar</p>
+        <p className='text-[65px] text-[#0048BE] font-bold text-center mb-4'>Planes</p>
+        <p className='text-[#828282] text-[30px] font-[100] text-center mb-[100px]'>Elige el plan que se adapta a tu forma de contratar</p>
 
         <div className='flex flex-row gap-8 items-start justify-center flex-wrap'>
           <PlanCard
@@ -254,9 +254,16 @@ export const HomePage = () => {
               { text: "4 usuarios disponibles" }
             ]}
             additionals={[
-              { text: "Firma de contratos FES o FEA" },
-              { text: "Validación Antecedentes Empresas" },
-              { text: "Meta Ads Apoyo en campañas" }
+              { text: "Firma de contratos" },
+              { text: "Validación Antecedentes" },
+              { text: "Meta Ads" },
+              { text: "Revi AI" }
+            ]}
+            subtext={[
+              { text: "FES o FEA" },
+              { text: "Empresas" },
+              { text: "Apoyo en campañas" },
+              { text: "Lectura de documentos" }
             ]}
             ctaText="Elegir plan"
             currencyBadge="$ USD"
