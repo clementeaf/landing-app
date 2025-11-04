@@ -25,6 +25,7 @@ import performanceChart from '@/assets/performance-chart.png';
 import matias from '@/assets/maatias.png';
 import reciclapp from '@/assets/reciclapp.png';
 const icons = [goingUp, clock, persons, chat, clock, circles];
+import hoktusWhatsapp from '@/assets/hoktus-white.png';
 
 interface FAQItemProps {
   question: string;
@@ -379,73 +380,73 @@ export const HomePage = () => {
       </section>
 
       {/* Hero - Footer: ¿Listo para automatizar tus procesos de forma conversacional? */}
-      <section className='bg-[#02193B] rounded-t-[80px] w-full flex flex-col items-center justify-center pt-[120px]'>
+      <section className='bg-[#02193B] rounded-t-[80px] w-full flex flex-col items-center justify-center py-[20px]'>
         {/* Top CTA Section */}
-        <div className='w-[90%] flex flex-row items-center justify-between pb-[100px] border-b border-[#FFFFFF]/10'>
+        <div className='w-[90%] h-[242px] flex flex-row items-center justify-between border-b border-[#FFFFFF]/10'>
           <h2 className='text-white text-5xl font-bold max-w-[733px]'>
             ¿LISTO PARA AUTOMATIZAR TUS PROCESOS DE FORMA CONVERSACIONAL?
           </h2>
-          <div className='flex flex-col items-end gap-4'>
-            <div className='flex flex-row items-center gap-4'>
+          <div className='flex flex-col items-end gap-[30px]'>
+            <div className='flex flex-row items-center gap-4 h-[50px]'>
               <div className='flex flex-col items-end'>
-                <p className='text-white text-sm'>AI for Hiring</p>
-                <p className='text-white text-sm'>One conversation. One hire.</p>
+                <p className='text-white text-[23.36px]'>AI for Hiring</p>
+                <p className='text-white text-[23.36px]'>One conversation. <span className='italic'>One hire</span>.</p>
               </div>
-              <img src={logo} alt="Hoktus Logo" className='w-10 h-10' />
+              <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[50px]' />
             </div>
-            <button className='bg-white text-[#01122D] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'>
+            <button className='bg-white text-[#000E2] h-[46px] w-[175px] rounded-[24.5px] flex items-center justify-center font-normaltext-lg mt-10'>
               Agendar reunión
             </button>
           </div>
         </div>
 
         {/* Main Footer Content */}
-        <div className='w-[90%] flex flex-row justify-between py-[100px] border-b border-[#FFFFFF]/10 gap-12'>
+        <div className='w-[90%] flex flex-row  items-start justify-between py-[20px] border-b border-[#FFFFFF]/10 gap-12'>
           {/* Hoktus Info */}
-          <div className='flex flex-col gap-6 max-w-[300px]'>
+          <div className='flex flex-col gap-6 max-w-[300px] items-start justify-start'>
             <div className='flex flex-row items-center gap-3'>
               <img src={logo} alt="Hoktus Logo" className='w-8 h-8' />
-              <span className='text-white text-3xl font-bold'>Hoktus</span>
+              <span className='text-white text-[60px] font-bold'>Hoktus</span>
             </div>
             <p className='text-white text-base'>
               Plataforma de reclutamiento y automatización con IA conversacional.
             </p>
-            <div className='flex flex-row items-center gap-2'>
+            <div className='flex flex-row items-center gap-2 mt-8'>
               <img src={chile} alt="Chile Flag" className='w-6 h-6' />
               <span className='text-white text-base'>Santiago, Chile (HQ)</span>
             </div>
           </div>
 
           {/* Links */}
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4 mt-4'>
             <h4 className='text-white text-lg font-bold'>Links</h4>
             <ul className='flex flex-col gap-2'>
-              <li><a href='#' className='text-white text-base hover:underline'>Nosotros</a></li>
-              <li><a href='#' className='text-white text-base hover:underline'>Funcionalidades</a></li>
-              <li><a href='#' className='text-white text-base hover:underline'>Planes</a></li>
-              <li><a href='#' className='text-white text-base hover:underline'>Contacto</a></li>
+              <li><a href='#' className='text-white/60 text-light hover:underline'>Nosotros</a></li>
+              <li><a href='#' className='text-white/60 text-light hover:underline'>Funcionalidades</a></li>
+              <li><a href='#' className='text-white/60 text-light hover:underline'>Planes</a></li>
+              <li><a href='#' className='text-white/60 text-light hover:underline'>Contacto</a></li>
             </ul>
           </div>
 
           {/* Follow */}
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4 mt-4'>
             <h4 className='text-white text-lg font-bold'>Follow</h4>
             <ul className='flex flex-col gap-2'>
-              <li><a href='#' className='text-white text-base hover:underline'>LinkedIn</a></li>
-              <li><a href='#' className='text-white text-base hover:underline'>Instagram</a></li>
+              <li><a href='#' className='text-white/60 text-light hover:underline'>LinkedIn</a></li>
+              <li><a href='#' className='text-white/60 text-light hover:underline'>Instagram</a></li>
             </ul>
           </div>
 
           {/* News */}
-          <div className='flex flex-col gap-4 max-w-[300px]'>
+          <div className='flex flex-col gap-4 max-w-[300px] mt-4'>
             <h4 className='text-white text-lg font-bold'>News</h4>
-            <p className='text-white text-base'>Registrarme para recibir novedades</p>
+            <p className='text-white/60 text-light'>Registrarme para recibir novedades</p>
             <input
               type='email'
               placeholder='Correo electrónico'
-              className='bg-transparent border border-[#FFFFFF]/30 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-[#1677FF] placeholder:text-gray-400'
+              className='bg-transparent border border-[#FFFFFF] text-white px-4 py-3 rounded-lg focus:outline-none focus:border-[#1677FF] placeholder:text-gray-400 rounded-[24.5px]'
             />
-            <button className='bg-white text-[#01122D] px-6 py-3 rounded-lg font-semibold text-base hover:bg-gray-100 transition-colors'>
+            <button className='bg-white text-[#01122D] px-6 py-3 text-light rounded-[24.5px] w-[124px] h-[46px] flex items-center justify-center'>
               Suscribirme
             </button>
           </div>
@@ -453,7 +454,7 @@ export const HomePage = () => {
 
         {/* Bottom Copyright Section */}
         <div className='w-[90%] flex flex-row items-center justify-between py-8'>
-          <p className='text-white text-sm'>
+          <p className='text-white text-sm text-light'>
             Hoktus Inc. y sus subsidiarias - Todos los derechos reservados
           </p>
           <div className='flex flex-row gap-6'>
