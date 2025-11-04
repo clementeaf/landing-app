@@ -236,11 +236,11 @@ export const HomePage = () => {
       </section>
 
       {/* Planes */}
-      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] max-w-[1810px] flex flex-col items-center justify-center py-[120px]'>
+      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px]'>
         <p className='text-[65px] text-[#0048BE] font-bold text-center mb-4'>Planes</p>
         <p className='text-[#828282] text-[30px] font-[100] text-center mb-[100px]'>Elige el plan que se adapta a tu forma de contratar</p>
 
-        <div className='flex flex-row gap-8 items-start justify-center flex-wrap'>
+        <div className='flex flex-row gap-8 items-start justify-center w-full'>
           <PlanCard
             title="Plan Standard"
             price="$490"
