@@ -324,11 +324,13 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Los números hablan solos */}
-      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[80px] flex flex-col items-center justify-start w-full p-4 py-[120px] mt-[120px] '>
-        <p className='text-[75px] text-[#FFFFFF] font-bold text-center w-[900px] mb-[100px]'>Los números <span className='text-[#1677FF]'>hablan</span></p>
+      {/* Los números hablan solos */} {/* Responsive */}
+      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] flex flex-col items-center justify-start w-full p-4 sm:p-6 lg:p-4 py-8 sm:py-12 md:py-16 lg:py-[120px] mt-8 sm:mt-12 md:mt-16 lg:mt-[120px]'>
+        <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[75px] text-[#FFFFFF] font-bold text-center w-full sm:w-[95%] md:w-[90%] lg:w-[900px] mb-6 sm:mb-8 md:mb-12 lg:mb-[100px] px-4 sm:px-6 lg:px-0'>
+          Los números <span className='text-[#1677FF]'>hablan</span>
+        </h2>
 
-        <div className='flex flex-row gap-8 flex-wrap justify-center'>
+        <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 flex-wrap justify-center w-full px-4 sm:px-6 lg:px-0'>
           {statisticsData.statistics.map((stat, index) => {
             const iconSrc = icons[index];
             return (
@@ -337,7 +339,7 @@ export const HomePage = () => {
                 number={stat.number}
                 title={stat.title}
                 description={stat.description}
-                icon={iconSrc ? <img src={iconSrc} alt="" className='w-[20px] h-[20px]' /> : undefined}
+                icon={iconSrc ? <img src={iconSrc} alt="" className='w-4 h-4 sm:w-5 sm:h-5 lg:w-[20px] lg:h-[20px]' /> : undefined}
               />
             );
           })}

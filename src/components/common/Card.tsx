@@ -32,16 +32,16 @@ export function Card({ bg }: CardProps): ReactElement {
  */
 export function StatistisCard({ number, title, description, icon }: StatisticsCardProps): ReactElement {
   return (
-    <div className='bg-[#000F28] rounded-[40px] w-[486px] h-[334px] flex flex-col relative p-10'>
+    <div className='bg-[#000F28] rounded-[20px] sm:rounded-[30px] lg:rounded-[40px] w-full sm:w-[90%] md:w-[85%] lg:w-[450px] xl:w-[486px] h-auto sm:h-[280px] md:h-[310px] lg:h-[334px] flex flex-col relative p-6 sm:p-8 lg:p-10'>
       {icon && (
-        <div className='absolute top-8 right-10 w-12 h-12 bg-[#E3EEFF]/10 border border-[#DBE9FF]/20 rounded-full flex items-center justify-center'>
+        <div className='absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-10 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-[#E3EEFF]/10 border border-[#DBE9FF]/20 rounded-full flex items-center justify-center'>
           {icon}
         </div>
       )}
-      <div className='pt-[35px]'>
-        <h3 className='text-white text-[63px] font-bold'>{number}</h3>
-        <h4 className='text-white text-[25px] font-semibold'>{title}</h4>
-        <p className='text-[#95BFFF] text-[22px] font-light'>{description}</p>
+      <div className='pt-4 sm:pt-6 lg:pt-[35px]'>
+        <h3 className='text-white text-4xl sm:text-5xl md:text-6xl lg:text-[63px] font-bold'>{number}</h3>
+        <h4 className='text-white text-lg sm:text-xl md:text-2xl lg:text-[25px] font-semibold mt-2 sm:mt-3 lg:mt-0'>{title}</h4>
+        <p className='text-[#95BFFF] text-base sm:text-lg md:text-xl lg:text-[22px] font-light mt-2 sm:mt-3 lg:mt-0'>{description}</p>
       </div>
     </div>
   );
