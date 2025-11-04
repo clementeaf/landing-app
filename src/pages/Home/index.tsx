@@ -201,8 +201,8 @@ export const HomePage = () => {
       </section>
 
       {/* Automatiza tu reclutamiento, sin importar la industria */}
-      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] flex flex-col items-center justify-start w-[90%]'>
-        <p className='text-[65px] text-[#05234F] font-bold text-center w-[900px] pt-[120px]'>Automatiza tu reclutamiento, sin importar la industria</p>
+      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] flex flex-col items-center justify-start w-[95%]'>
+        <p className='text-[65px] text-[#05234F] font-bold text-center w-[900px] pt-[120px]' style={{ lineHeight: '65px' }}>Automatiza tu reclutamiento, sin importar la industria</p>
         <p className='text-[#888888] text-[35px] font-[100] text-center py-5'>Hoktus filtra, entrevista, revisa y valida por WhatsApp</p>
 
         <div className='flex flex-row items-center justify-center gap-8 pb-[120px] mt-[100px]'>
@@ -216,9 +216,9 @@ export const HomePage = () => {
 
       {/* Los números hablan solos */}
       <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[80px] flex flex-col items-center justify-start w-full p-4 py-[120px] mt-[120px] '>
-        <p className='text-[75px] text-[#FFFFFF] font-bold text-center w-[900px] mb-[100px]'>Los números hablan <span className='text-[#1677FF]'>por sí solos</span></p>
+        <p className='text-[75px] text-[#FFFFFF] font-bold text-center w-[900px] mb-[100px]'>Los números <span className='text-[#1677FF]'>hablan</span></p>
 
-        <div className='grid grid-cols-3 gap-6 w-full max-w-[1200px]'>
+        <div className='flex flex-row gap-8 flex-wrap justify-center'>
           {statisticsData.statistics.map((stat, index) => {
             const iconSrc = icons[index];
             return (
@@ -227,7 +227,7 @@ export const HomePage = () => {
                 number={stat.number}
                 title={stat.title}
                 description={stat.description}
-                icon={iconSrc ? <img src={iconSrc} alt="" className="w-6 h-6" /> : undefined}
+                icon={iconSrc ? <img src={iconSrc} alt="" className='w-[20px] h-[20px]' /> : undefined}
               />
             );
           })}

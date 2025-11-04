@@ -32,16 +32,16 @@ export function Card({ bg }: CardProps): ReactElement {
  */
 export function StatistisCard({ number, title, description, icon }: StatisticsCardProps): ReactElement {
   return (
-    <div className='bg-[#000F28] rounded-[25px] border border-[#00173B] p-6 relative'>
+    <div className='bg-[#000F28] rounded-[40px] w-[486px] h-[334px] flex flex-col relative p-10'>
       {icon && (
-        <div className='absolute top-4 right-4 w-12 h-12 bg-[#E3EEFF]/10 border border-[#DBE9FF]/20 rounded-full flex items-center justify-center'>
+        <div className='absolute top-8 right-10 w-12 h-12 bg-[#E3EEFF]/10 border border-[#DBE9FF]/20 rounded-full flex items-center justify-center'>
           {icon}
         </div>
       )}
-      <div className='flex flex-col gap-3'>
-        <h3 className='text-[#95BFFF] text-5xl font-bold'>{number}</h3>
-        <h4 className='text-[#95BFFF] text-xl font-semibold'>{title}</h4>
-        <p className='text-[#95BFFF] text-sm font-light'>{description}</p>
+      <div className='pt-[35px]'>
+        <h3 className='text-white text-[63px] font-bold'>{number}</h3>
+        <h4 className='text-white text-[25px] font-semibold'>{title}</h4>
+        <p className='text-[#95BFFF] text-[22px] font-light'>{description}</p>
       </div>
     </div>
   );
