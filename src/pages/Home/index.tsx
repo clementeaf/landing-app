@@ -235,7 +235,7 @@ export const HomePage = () => {
       </section>
 
       {/* Planes */}
-      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px]'>
+      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] max-w-[1810px] flex flex-col items-center justify-center py-[120px]'>
         <p className='text-[65px] text-[#0048BE] font-bold text-center mb-4'>Planes</p>
         <p className='text-[#828282] text-[30px] font-[100] text-center mb-[100px]'>Elige el plan que se adapta a tu forma de contratar</p>
 
@@ -372,16 +372,17 @@ export const HomePage = () => {
         <p className='text-[#001844] text-lg text-center mt-12'>
           Si no encuentras lo que buscas, no dudes en{' '}
           <a href="#" className='underline text-[#001844]'>
-            contactárnos directamente
+            contactárnos
           </a>
+          {' '}directamente
         </p>
       </section>
 
       {/* Hero - Footer: ¿Listo para automatizar tus procesos de forma conversacional? */}
-      <section className='bg-[#01122D] rounded-t-[80px] w-full flex flex-col items-center justify-center pt-[120px]'>
+      <section className='bg-[#02193B] rounded-t-[80px] w-full flex flex-col items-center justify-center pt-[120px]'>
         {/* Top CTA Section */}
         <div className='w-[90%] flex flex-row items-center justify-between pb-[100px] border-b border-[#FFFFFF]/10'>
-          <h2 className='text-white text-5xl font-bold max-w-[700px] leading-tight'>
+          <h2 className='text-white text-5xl font-bold max-w-[733px]'>
             ¿LISTO PARA AUTOMATIZAR TUS PROCESOS DE FORMA CONVERSACIONAL?
           </h2>
           <div className='flex flex-col items-end gap-4'>
