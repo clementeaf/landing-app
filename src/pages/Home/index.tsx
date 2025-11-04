@@ -118,7 +118,7 @@ export const HomePage = () => {
 
   return (
     <div className="flex flex-col items-center w-full">
-      {/* Gradient header + Navbar*/}
+      {/* Gradient header + Navbar*/} {/* Responsive */}
       <section className="flex flex-col bg-gradient-to-b from-[#01122D] to-[#094FBE] min-h-screen w-full items-center justify-between py-4 sm:py-6 md:py-8">
         <div className='w-full flex flex-col items-center justify-center px-4 sm:px-0 relative'>
           <nav className="flex justify-between items-center px-3 sm:px-6 w-full sm:w-[90%] h-[56px] sm:h-[72px] md:h-[88px] rounded-[20px] sm:rounded-[40px] md:rounded-[52.5px] bg-[#FBFBFB]/10 text-[#FFFFFF] relative z-50">
@@ -230,51 +230,69 @@ export const HomePage = () => {
       </section>
 
       {/* Porque Hoktus?*/}
-      <section className='flex flex-col items-center justify-center'>
-        <button className='w-[318px] h-[68px] rounded-[34px] bg-[#ECF4FF] text-[#1677FF] text-[20px] font-[100] my-[100px]'>Porque Hoktus</button>
-        <p className='text-[60px] font-bold text-[#012257] text-center'>El camino inteligente para escalar tu reclutamiento</p>
-        <p className='text-[30px] font-[100] text-[#A8A8A8] text-center w-[70%] py-10'>Hoktus transforma la forma en que reclutas personal operativo con IA conversacional, automatizando entrevistas y validación documental por WhatsApp. Recluta más rápido, sin sobrecargar a tu equipo.</p>
+      <section className='flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
+        <button className='w-full sm:w-auto sm:min-w-[280px] lg:w-[318px] h-[56px] sm:h-[64px] lg:h-[68px] rounded-[28px] sm:rounded-[32px] lg:rounded-[34px] bg-[#ECF4FF] text-[#1677FF] text-base sm:text-lg lg:text-[20px] font-[100] my-8 sm:my-12 md:my-16 lg:my-[100px]'>
+          Porque Hoktus
+        </button>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold text-[#012257] text-center px-4 sm:px-6 lg:px-0'>
+          El camino inteligente para escalar tu reclutamiento
+        </h2>
+        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[30px] font-[100] text-[#A8A8A8] text-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] py-4 sm:py-6 md:py-8 lg:py-10 px-4 sm:px-6'>
+          Hoktus transforma la forma en que reclutas personal operativo con IA conversacional, automatizando entrevistas y validación documental por WhatsApp. Recluta más rápido, sin sobrecargar a tu equipo.
+        </p>
 
         {/* Images content */}
-        <div className="flex flex-row items-center justify-center gap-[250px] px-8 py-16 w-full overflow-visible">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-[250px] px-0 sm:px-2 lg:px-8 py-8 sm:py-12 md:py-16 w-full overflow-visible">
           {/* Left Section - Woman with UI elements */}
-          <div className="relative flex-shrink-0" style={{ overflow: 'visible' }}>
-            <div className="h-[527px] w-[604px] relative rounded-lg overflow-visible bg-[#FAFCFF]">
+          <div className="relative flex-shrink-0 w-full sm:w-[90%] md:w-[80%] lg:w-auto pr-[60px] sm:pr-[80px] md:pr-[100px] lg:pr-0" style={{ overflow: 'visible' }}>
+            <div className="h-[280px] sm:h-[350px] md:h-[420px] lg:h-[527px] w-full sm:w-[90%] md:w-[85%] lg:w-[604px] relative rounded-lg overflow-visible bg-[#FAFCFF] mx-auto">
               <img
                 src={person}
                 alt="Persona usando Hoktus"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain sm:object-cover rounded-lg"
               />
 
               {/* Floating UI Element 1 - Performance */}
-              <img src={performanceChart} alt="Performance" className="absolute top-[100px] right-[-150px] z-10 w-[300px] object-cover" />
+              <img 
+                src={performanceChart} 
+                alt="Performance" 
+                className="absolute top-[50px] sm:top-[70px] md:top-[100px] right-[-50px] sm:right-[-60px] md:right-[-80px] lg:right-[-150px] z-10 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[300px] object-cover" 
+              />
 
               {/* Floating UI Element 2 - Postulante Chat */}
-              <div className="absolute bottom-20 right-[-190px] z-10 w-[235.47px] h-[73.83px] bg-white rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] shadow-lg p-2 px-4 text-[#1677FF]">
-                <h3 className="font-semibold text-[15px]">Postulante</h3>
-                <p className="text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
+              <div className="absolute bottom-[10px] sm:bottom-[15px] md:bottom-20 right-[-60px] sm:right-[-80px] md:right-[-110px] lg:right-[-190px] z-10 w-[120px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF]">
+                <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
+                <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
               </div>
             </div>
           </div>
 
-          <div className='flex items-center justify-center gap-8'>
+          <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
             {/* Middle Section - Recruitment Card */}
-            <div className="flex flex-col items-start justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg p-8 max-w-[307.5px] h-[464.38px]">
-              <img src={starsIcon} alt="Performance" className="w-10 h-10 mb-6" />
-              <h2 className="text-[#1677FF] font-bold text-2xl mb-4 text-start">Recluta más rápido con Hoktus AI</h2>
-              <p className="text-[#012257] text-[18px] mb-6 text-start">
+            <div className="flex flex-col items-start justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[307.5px] h-auto sm:h-[420px] lg:h-[464.38px]">
+              <img src={starsIcon} alt="Performance" className="w-8 h-8 sm:w-10 sm:h-10 mb-4 sm:mb-6" />
+              <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
+                Recluta más rápido con Hoktus AI
+              </h2>
+              <p className="text-[#012257] text-base sm:text-[18px] mb-4 sm:mb-6 text-start flex-1">
                 Automatiza conversaciones, valida aptitudes y revisa antecedentes en un solo flujo. Recibe reportes en tiempo real y toma decisiones ágiles.
               </p>
-              <button className="w-full px-6 py-3 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors">
+              <button className="w-full px-6 py-3 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors text-sm sm:text-base">
                 Agendar demo
               </button>
             </div>
 
             {/* Right Section - Systems Connection Card */}
-            <div className="flex flex-col items-start bg-white rounded-[20px] shadow-lg p-8 max-w-[420px] h-[464px]">
-              <img src={sysConected} alt="Conectados con tus sistemas" className="w-full h-full object-cover rounded-lg" />
-              <h2 className="text-[#1677FF] font-bold text-2xl mb-4 text-start">Conectados con tus sistemas</h2>
-              <p className="text-gray-600 text-[18px] leading-relaxed text-start w-[290px]">
+            <div className="flex flex-col items-start bg-white rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[420px] h-auto lg:h-[464px]">
+              <img 
+                src={sysConected} 
+                alt="Conectados con tus sistemas" 
+                className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-4 sm:mb-0" 
+              />
+              <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
+                Conectados con tus sistemas
+              </h2>
+              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-start w-full sm:w-[290px]">
                 Nos integramos a tus sistemas para adaptarnos a ti. Si no tenemos integración, la desarrollamos.
               </p>
             </div>
