@@ -229,7 +229,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Porque Hoktus?*/}
+      {/* Porque Hoktus?*/} {/* Responsive */}
       <section className='flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
         <button className='w-full sm:w-auto sm:min-w-[280px] lg:w-[318px] h-[56px] sm:h-[64px] lg:h-[68px] rounded-[28px] sm:rounded-[32px] lg:rounded-[34px] bg-[#ECF4FF] text-[#1677FF] text-base sm:text-lg lg:text-[20px] font-[100] my-8 sm:my-12 md:my-16 lg:my-[100px]'>
           Porque Hoktus
@@ -300,17 +300,27 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Automatiza tu reclutamiento, sin importar la industria */}
-      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] flex flex-col items-center justify-start w-[95%]'>
-        <p className='text-[65px] text-[#05234F] font-bold text-center w-[900px] pt-[120px]' style={{ lineHeight: '65px' }}>Automatiza tu reclutamiento, sin importar la industria</p>
-        <p className='text-[#888888] text-[35px] font-[100] text-center py-5'>Hoktus filtra, entrevista, revisa y valida por WhatsApp</p>
+      {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
+      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] flex flex-col items-center justify-start w-full sm:w-[95%]'>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[65px] text-[#05234F] font-bold text-center w-full sm:w-[95%] md:w-[90%] lg:w-[900px] pt-8 sm:pt-12 md:pt-16 lg:pt-[120px] px-4 sm:px-6 lg:px-0 leading-tight sm:leading-[1.2] lg:leading-[65px]'>
+          Automatiza tu reclutamiento, sin importar la industria
+        </h2>
+        <p className='text-[#888888] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[35px] font-[100] text-center py-3 sm:py-4 md:py-5 px-4 sm:px-6 lg:px-0'>
+          Hoktus filtra, entrevista, revisa y valida por WhatsApp
+        </p>
 
-        <div className='flex flex-row items-center justify-center gap-8 pb-[120px] mt-[100px]'>
-          <Card bg={retail} />
-          <Card bg={education} />
-          <Card bg={construction} />
-          <Card bg={bpo} />
-          <Card bg={security} />
+        <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] mt-6 sm:mt-8 md:mt-12 lg:mt-[100px] w-full'>
+          <div className='w-full overflow-x-auto scroll-smooth' style={{ scrollPaddingLeft: '1rem', scrollPaddingRight: '1rem' }}>
+            <div className='flex flex-row items-center justify-start sm:justify-center gap-4 sm:gap-6 md:gap-8 min-w-max'>
+              <div className='flex-shrink-0 w-4 sm:w-6 md:w-8 lg:w-0'></div>
+              <Card bg={retail} />
+              <Card bg={education} />
+              <Card bg={construction} />
+              <Card bg={bpo} />
+              <Card bg={security} />
+              <div className='flex-shrink-0 w-4 sm:w-6 md:w-8 lg:w-0'></div>
+            </div>
+          </div>
         </div>
       </section>
 
