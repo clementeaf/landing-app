@@ -42,12 +42,12 @@ interface FAQItemProps {
  */
 function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps): ReactElement {
   return (
-    <div className='border-b border-gray-300 pb-6 mb-6'>
+    <div className='border-b border-gray-300 pb-6 mb-6 w-full flex flex-col items-center justify-center'>
       <button
         onClick={onToggle}
         className='w-full flex items-center justify-between text-left'
       >
-        <h3 className={`text-xl font-bold ${isOpen ? 'text-[#05234F]' : 'text-[#05234F]'}`}>
+        <h3 className={`text-[24px] font-normal text-[#1677FF] w-full`}>
           {question}
         </h3>
         <svg
@@ -60,7 +60,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps): ReactEle
         </svg>
       </button>
       {isOpen && (
-        <p className='text-[#888888] text-lg mt-4 leading-relaxed'>
+        <p className='text-[#293753] text-[19px] font-light mt-4 leading-relaxed'>
           {answer}
         </p>
       )}
@@ -352,26 +352,26 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Nosotros respondemos todas tus preguntas */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px] px-8'>
+      <section className='bg-[#F7FAFF] w-full flex flex-col items-center justify-center py-[120px] px-8'>
         {/* FAQ Badge */}
-        <div className='mb-8'>
-          <span className='text-[#1677FF] text-sm font-semibold'>FAQ</span>
+        <div className='mb-8 rounded-[66px] bg-[#EBF3FF] px-6 py-2'>
+          <span className='text-[#1677FF] text-[16px] font-semibold'>FAQ</span>
         </div>
 
         {/* Main Title */}
-        <h2 className='text-[#05234F] text-5xl font-bold text-center mb-16 max-w-[900px]'>
+        <h2 className='text-[#05234F] text-[52px] font-bold text-center mb-16 max-w-[700px]'>
           Nosotros responderemos todas tus preguntas
         </h2>
 
         {/* FAQ List */}
-        <div className='w-full max-w-[800px]'>
+        <div className='w-full flex flex-col items-center justify-center w-[900px]'>
           <FAQList />
         </div>
 
         {/* Bottom Section */}
-        <p className='text-[#888888] text-lg text-center mt-12'>
+        <p className='text-[#001844] text-lg text-center mt-12'>
           Si no encuentras lo que buscas, no dudes en{' '}
-          <a href="#" className='underline text-[#1677FF] hover:text-[#0050CC]'>
+          <a href="#" className='underline text-[#001844]'>
             contactárnos directamente
           </a>
         </p>
