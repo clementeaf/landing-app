@@ -19,6 +19,10 @@ import stars from '@/assets/stars.png';
 import { Card, StatistisCard, PlanCard } from '@/components/common/Card';
 import statisticsData from '@/data/statistics.json';
 import { useState, type ReactElement } from 'react';
+import sysConected from '@/assets/con-sys.png';
+import starsIcon from '@/assets/stars2.png';
+import chartIcon from '@/assets/chart.png';
+import performanceChart from '@/assets/performance-chart.png';
 
 const icons = [goingUp, clock, persons, chat, clock, circles];
 
@@ -150,124 +154,45 @@ export const HomePage = () => {
         <p className='text-[30px] font-[100] text-[#A8A8A8] text-center w-[70%] py-10'>Hoktus transforma la forma en que reclutas personal operativo con IA conversacional, automatizando entrevistas y validación documental por WhatsApp. Recluta más rápido, sin sobrecargar a tu equipo.</p>
 
         {/* Images content */}
-        <div className="flex flex-row items-center justify-center gap-[150px] px-8 py-16 w-full z-[1]">
+        <div className="flex flex-row items-center justify-center gap-[250px] px-8 py-16 w-full overflow-visible">
           {/* Left Section - Woman with UI elements */}
-          <div>
-            <div className="h-[527px] min-w-[604px] relative rounded-lg overflow-hidden bg-[#FAFCFF]">
+          <div className="relative flex-shrink-0" style={{ overflow: 'visible' }}>
+            <div className="h-[527px] w-[604px] relative rounded-lg overflow-visible bg-[#FAFCFF]">
               <img
                 src={person}
                 alt="Persona usando Hoktus"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-lg"
               />
 
               {/* Floating UI Element 1 - Performance */}
-              <div className="absolute top-8 right-[-120px] z-[999] w-[280px] bg-white rounded-lg shadow-lg p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-5 h-5 bg-[#1677FF] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-[#1677FF] font-semibold text-sm">Performance</h3>
-                </div>
-                <div className="flex gap-2 mb-3">
-                  <button className="text-gray-400 text-xs px-2 py-1">Weekly</button>
-                  <button className="text-[#1677FF] text-xs px-2 py-1 rounded flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-[#1677FF] rounded-full"></span>
-                    Monthly
-                  </button>
-                </div>
-                <div className="h-[60px] bg-gray-50 rounded p-2 relative">
-                  <svg className="w-full h-full" viewBox="0 0 200 60" preserveAspectRatio="none">
-                    <polyline
-                      points="10,50 30,45 50,40 70,35 90,30 110,25 130,20 150,18 170,15 190,12"
-                      fill="none"
-                      stroke="#1677FF"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <img src={performanceChart} alt="Performance" className="absolute top-[100px] right-[-150px] z-10 w-[300px] object-cover" />
 
               {/* Floating UI Element 2 - Postulante Chat */}
-              <div className="bottom-20 right-[-100px] w-[260px] bg-white rounded-lg shadow-lg p-4">
-                <h3 className="text-[#1677FF] font-semibold text-sm mb-2">Postulante</h3>
-                <p className="text-gray-400 text-xs">Hola Sofia! estoy interesado en el puesto de conductor, ¿Qué debo...</p>
+              <div className="absolute bottom-20 right-[-190px] z-10 w-[235.47px] h-[73.83px] bg-white rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] shadow-lg p-2 px-4 text-[#1677FF]">
+                <h3 className="font-semibold text-[15px]">Postulante</h3>
+                <p className="text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
               </div>
             </div>
           </div>
 
           <div className='flex items-center justify-center gap-8'>
-
             {/* Middle Section - Recruitment Card */}
-            <div className="flex flex-col items-center bg-[#ECF4FF] rounded-lg shadow-lg p-8 max-w-[307.5px] h-[464.38px]">
-              <div className="w-16 h-16 bg-[#1677FF] rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              </div>
-              <h2 className="text-[#1677FF] font-bold text-2xl mb-4 text-center">Recluta más rápido con Hoktus AI</h2>
-              <p className="text-[#012257] text-sm leading-relaxed mb-6 text-center">
+            <div className="flex flex-col items-start justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg p-8 max-w-[307.5px] h-[464.38px]">
+              <img src={starsIcon} alt="Performance" className="w-10 h-10 mb-6" />
+              <h2 className="text-[#1677FF] font-bold text-2xl mb-4 text-start">Recluta más rápido con Hoktus AI</h2>
+              <p className="text-[#012257] text-[18px] mb-6 text-start">
                 Automatiza conversaciones, valida aptitudes y revisa antecedentes en un solo flujo. Recibe reportes en tiempo real y toma decisiones ágiles.
               </p>
-              <button className="w-full px-6 py-3 bg-[#1677FF] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <button className="w-full px-6 py-3 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors">
                 Agendar demo
               </button>
             </div>
 
             {/* Right Section - Systems Connection Card */}
-            <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-8 max-w-[420px] h-[464px]">
-              {/* Diagram */}
-              <div className="relative w-32 h-32 mb-6">
-                {/* Center circle */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#1677FF] rounded-full flex items-center justify-center z-10">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </div>
-
-                {/* Top-left circle */}
-                <div className="absolute top-0 left-0 w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                  </svg>
-                </div>
-
-                {/* Top-right circle */}
-                <div className="absolute top-0 right-0 w-10 h-10 bg-yellow-200 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                  </svg>
-                </div>
-
-                {/* Bottom-left circle */}
-                <div className="absolute bottom-0 left-0 w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    <path fillRule="evenodd" d="M3 11a1 1 0 100 2h11.586l-4.293 4.293a1 1 0 001.414 1.414l6-6a1 1 0 000-1.414l-6-6a1 1 0 00-1.414 1.414L14.586 11H3z" clipRule="evenodd" />
-                  </svg>
-                </div>
-
-                {/* Bottom-right circle */}
-                <div className="absolute bottom-0 right-0 w-10 h-10 bg-orange-200 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                  </svg>
-                </div>
-
-                {/* Dashed lines connecting to center */}
-                <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 5 }}>
-                  <line x1="20" y1="20" x2="64" y2="64" stroke="#1677FF" strokeWidth="1" strokeDasharray="4,4" opacity="0.3" />
-                  <line x1="108" y1="20" x2="64" y2="64" stroke="#1677FF" strokeWidth="1" strokeDasharray="4,4" opacity="0.3" />
-                  <line x1="20" y1="108" x2="64" y2="64" stroke="#1677FF" strokeWidth="1" strokeDasharray="4,4" opacity="0.3" />
-                  <line x1="108" y1="108" x2="64" y2="64" stroke="#1677FF" strokeWidth="1" strokeDasharray="4,4" opacity="0.3" />
-                </svg>
-              </div>
-
-              <h2 className="text-[#1677FF] font-bold text-2xl mb-4 text-center">Conectados con tus sistemas</h2>
-              <p className="text-gray-600 text-sm leading-relaxed text-center">
+            <div className="flex flex-col items-start bg-white rounded-[20px] shadow-lg p-8 max-w-[420px] h-[464px]">
+              <img src={sysConected} alt="Conectados con tus sistemas" className="w-full h-full object-cover rounded-lg" />
+              <h2 className="text-[#1677FF] font-bold text-2xl mb-4 text-start">Conectados con tus sistemas</h2>
+              <p className="text-gray-600 text-[18px] leading-relaxed text-start w-[290px]">
                 Nos integramos a tus sistemas para adaptarnos a ti. Si no tenemos integración, la desarrollamos.
               </p>
             </div>
@@ -281,11 +206,11 @@ export const HomePage = () => {
         <p className='text-[#888888] text-[35px] font-[100] text-center py-5'>Hoktus filtra, entrevista, revisa y valida por WhatsApp</p>
 
         <div className='flex flex-row items-center justify-center gap-8 pb-[120px] mt-[100px]'>
-          <Card bg={retail}/>
-          <Card bg={education}/>
-          <Card bg={construction}/>
+          <Card bg={retail} />
+          <Card bg={education} />
+          <Card bg={construction} />
           <Card bg={bpo} />
-          <Card bg={security}/>
+          <Card bg={security} />
         </div>
       </section>
 
@@ -313,7 +238,7 @@ export const HomePage = () => {
       <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[80px] w-[90%] flex flex-col items-center justify-center py-[120px]'>
         <p className='text-[65px] text-[#05234F] font-bold text-center mb-4'>Planes</p>
         <p className='text-[#888888] text-[35px] font-[100] text-center mb-[100px]'>Elige el plan que se adapta a tu forma de contratar</p>
-        
+
         <div className='flex flex-row gap-8 items-start justify-center flex-wrap'>
           <PlanCard
             title="Plan Standard"
@@ -337,7 +262,7 @@ export const HomePage = () => {
             ctaText="Elegir plan"
             currencyBadge="$ USD"
           />
-          
+
           <PlanCard
             title="Plan Business"
             isRequestQuote={true}
@@ -357,7 +282,7 @@ export const HomePage = () => {
           />
         </div>
       </section>
-      
+
       {/* Hero: Empieza a contratar */}
       <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] flex flex-row items-center justify-between p-12 relative overflow-hidden mt-[120px]'>
         {/* Left Content */}
@@ -432,9 +357,9 @@ export const HomePage = () => {
 
         {/* Profile Picture */}
         <div className='mb-6'>
-          <img 
-            src={person2} 
-            alt="Matías Romero" 
+          <img
+            src={person2}
+            alt="Matías Romero"
             className='w-24 h-24 rounded-full object-cover border-2 border-[#1677FF]/20'
           />
         </div>
