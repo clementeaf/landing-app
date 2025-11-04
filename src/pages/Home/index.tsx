@@ -291,9 +291,9 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] min-h-[450px] flex items-center relative overflow-visible mt-[120px]'>
-        <img src={stars} alt="Stars icon" className='w-[80px] absolute top-10 left-10' />
-        <div className='flex flex-col absolute top-20 left-[200px] w-[685px] gap-20'>
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[80px] w-[90%] h-[450px] flex items-center relative overflow-hidden mt-[120px]'>
+        <img src={stars} alt="Stars icon" className='w-[80px] absolute top-10 left-10 z-10' />
+        <div className='flex flex-col absolute top-20 left-[200px] w-[685px] gap-20 z-10'>
           <h2 className='text-[#1677FF] text-5xl font-bold'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
           </h2>
@@ -305,11 +305,11 @@ export const HomePage = () => {
           </button>
         </div>
 
-        <img src={chatSimulation} alt="Chat Simulation" className='w-[300px] object-cover absolute top-[200px] left-[600px]' />
+        <img src={chatSimulation} alt="Chat Simulation" className='w-[300px] object-cover absolute top-[200px] left-[600px] z-10' />
 
-        <div className='absolute right-0 z-10 overflow-visible'>
-          <img src={whatsapp} alt="WhatsApp" className='absolute top-[150px] right-[150px] w-[57px] z-10' />
-          <img src={person2} alt="Professional woman" className='w-[751px] h-[551px] object-contain z-[9999] bottom-[50px] relative' />
+        <div className='absolute right-0 bottom-0 z-10'>
+          <img src={whatsapp} alt="WhatsApp" className='absolute top-[150px] right-[150px] w-[57px] z-20' />
+          <img src={person2} alt="Professional woman" className='w-[600px] h-auto object-contain relative bottom-0' />
         </div>
       </section>
 
