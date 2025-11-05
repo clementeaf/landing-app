@@ -427,13 +427,13 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] w-full h-[550px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-10 sm:mt-20'>
-        <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-10 sm:mt-5 sm:left-[90px]'/>
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-10 sm:mt-20'>
+        <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]'/>
         <div className='flex flex-col absolute z-10'>
-          <h2 className='text-[#1677FF] text-[25px] mt-[75px] ml-[45px] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
+          <h2 className='text-[#1677FF] text-[25px] mt-[75px] ml-[30px] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
           </h2>
-          <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center ml-[90px] py-2 gap-3 sm:ml-[120px] sm:mt-[80px] mt-5'>
+          <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center ml-[115px] py-2 gap-3 sm:ml-[120px] sm:mt-[80px] mt-5'>
             Probar Hoktus
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -443,7 +443,7 @@ export const HomePage = () => {
 
         <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] object-cover transform z-10 mt-[350px] absolute sm:mt-[170px] sm:ml-[350px]' />
 
-        <div className='z-10 mt-[70px] sm:mt-[-125px]'>
+        <div className='z-10 mt-[30px] sm:mt-[-125px]'>
           <img src={whatsapp} alt="WhatsApp" className='w-[40px] absolute mt-[190px] right-[60px] sm:right-[100px]' />
           <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[55px]' />
         </div>
