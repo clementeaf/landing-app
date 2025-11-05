@@ -17,7 +17,7 @@ import chatSimulation from '@/assets/conversation.png';
 import person2 from '@/assets/person2.png';
 import { Card, StatistisCard, PlanCard } from '@/components/common/Card';
 import statisticsData from '@/data/statistics.json';
-import { useState, useEffect, type ReactElement } from 'react';
+import { useState, useEffect, useRef, type ReactElement } from 'react';
 import sysConected from '@/assets/con-sys.png';
 import performanceChart from '@/assets/performance-chart.png';
 import matias from '@/assets/maatias.png';
@@ -113,9 +113,12 @@ function FAQList(): ReactElement {
 
 export const HomePage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [currentCardIndex, setCurrentCardIndex] = useState<number>(0);
+  const [currentCardIndex, setCurrentCardIndex] = useState<number>(1);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
 
   const cards = [retail, education, construction, bpo, security];
+  const infiniteCards = [cards[cards.length - 1], ...cards, cards[0]];
 
   useEffect(() => {
     const handleResize = (): void => {
@@ -128,7 +131,20 @@ export const HomePage = () => {
 
     const interval = setInterval(() => {
       if (window.innerWidth < 640) {
-        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
+        setCurrentCardIndex((prevIndex) => {
+          const nextIndex = prevIndex + 1;
+          if (nextIndex >= infiniteCards.length - 1) {
+            setTimeout(() => {
+              setIsTransitioning(false);
+              setCurrentCardIndex(1);
+              setTimeout(() => {
+                setIsTransitioning(true);
+              }, 50);
+            }, 500);
+            return nextIndex;
+          }
+          return nextIndex;
+        });
       }
     }, 2000);
 
@@ -138,7 +154,7 @@ export const HomePage = () => {
       clearInterval(interval);
       window.removeEventListener('resize', handleResize);
     };
-  }, [cards.length]);
+  }, [infiniteCards.length]);
 
   return (
     <div className="flex flex-col items-center w-full overflow-x-hidden">
@@ -261,7 +277,7 @@ export const HomePage = () => {
         <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[14px] font-[400]'>
           Por qué Hoktus
         </button>
-        <p className='text-[28px] w-[85%] sm:text-[30px]  font-normal text-[#012257] text-center px-4'>
+        <p className='text-[28px] w-[85%] sm:text-[30px] font-semibold text-[#012257] text-center px-4'>
           El camino inteligente para escalar tu reclutamiento
         </p>
 
@@ -291,30 +307,30 @@ export const HomePage = () => {
 
           <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
             {/* Middle Section - Recruitment Card */}
-            <div className="flex flex-col items-start justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg p-6 sm:p-8 w-[90%] sm:w-[90%] h-auto">
+            <div className="flex flex-col items-center justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg py-6 px-[15px] sm:p-8 w-[83%] sm:w-[90%] h-auto mb-10">
               {/* <img src={starsIcon} alt="Performance" className="w-8 h-8 sm:w-10 sm:h-10 mb-4 sm:mb-6" /> */}
               <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-center">
                 Recluta más rápido con Hoktus AI
               </h2>
-              <p className="text-[#012257] text-base sm:text-[18px] mb-4 sm:mb-6 text-justify flex-1">
+              <p className="text-[#012257] text-[14px] sm:text-[18px] mb-4 sm:mb-6 text-center">
                 Automatiza conversaciones, valida aptitudes y revisa antecedentes en un solo flujo. Recibe reportes en tiempo real y toma decisiones ágiles.
               </p>
-              <button className="w-full px-6 py-3 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors text-sm sm:text-base">
+              <button className="w-full px-6 py-3 mt-2 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors text-sm sm:text-base">
                 Agendar demo
               </button>
             </div>
 
             {/* Right Section - Systems Connection Card */}
-            <div className="flex flex-col items-start bg-white rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[420px] h-auto lg:h-[464px]">
+            <div className="flex flex-col items-center bg-white rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[420px] h-auto lg:h-[464px]">
               <img
                 src={sysConected}
                 alt="Conectados con tus sistemas"
-                className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-4 sm:mb-0"
+                className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-7 sm:mb-0"
               />
               <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
                 Conectados con tus sistemas
               </h2>
-              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-start w-full sm:w-[290px]">
+              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center w-[90%] sm:w-[290px]">
                 Nos integramos a tus sistemas para adaptarnos a ti. Si no tenemos integración, la desarrollamos.
               </p>
             </div>
@@ -324,19 +340,23 @@ export const HomePage = () => {
 
       {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
       <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] flex flex-col items-center justify-start w-full sm:w-[95%] px-2'>
-        <h2 className='text-[20px] text-[#05234F] font-bold text-center w-full px-4 pt-6'>
+        <h2 className='text-[22px] mt-7 text-[#05234F] font-bold text-center w-[85%] px-4 pt-6'>
           Automatiza tu reclutamiento, sin importar la industria
         </h2>
-        <p className='text-[#888888] text-[16px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
+        <p className='text-[#888888] text-[14px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
           Hoktus filtra, entrevista, revisa y valida por WhatsApp
         </p>
 
         <div className='flex flex-col items-center justify-center gap-6 py-4 w-full'>
           {/* Carousel solo en móvil (< 640px) */}
           <div className='w-full flex items-center justify-center overflow-hidden relative sm:hidden'>
-            <div className='flex transition-transform duration-500 ease-in-out w-full' style={{ transform: `translateX(-${currentCardIndex * 100}%)` }}>
-              {cards.map((card, index) => (
-                <div key={index} className='w-full flex-shrink-0 flex justify-center px-4'>
+            <div 
+              ref={carouselRef}
+              className={`flex w-full ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`} 
+              style={{ transform: `translateX(-${currentCardIndex * 100}%)` }}
+            >
+              {infiniteCards.map((card, index) => (
+                <div key={`${card}-${index}`} className='w-full flex-shrink-0 flex justify-center px-4'>
                   <Card bg={card} />
                 </div>
               ))}
@@ -354,15 +374,20 @@ export const HomePage = () => {
 
           {/* Indicadores (dots) - Solo en móvil */}
           <div className='flex items-center justify-center gap-2 mt-4 sm:hidden'>
-            {cards.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentCardIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${index === currentCardIndex ? 'bg-[#1677FF] w-8' : 'bg-[#1677FF]/30 w-2'
-                  }`}
-                aria-label={`Ir a tarjeta ${index + 1}`}
-              />
-            ))}
+            {cards.map((_, index) => {
+              const displayIndex = currentCardIndex === 0 ? cards.length - 1 : 
+                                   currentCardIndex === infiniteCards.length - 1 ? 0 : 
+                                   currentCardIndex - 1;
+              return (
+                <button
+                  key={index}
+                  onClick={() => setCurrentCardIndex(index + 1)}
+                  className={`h-2 rounded-full transition-all duration-300 ${index === displayIndex ? 'bg-[#1677FF] w-8' : 'bg-[#1677FF]/30 w-2'
+                    }`}
+                  aria-label={`Ir a tarjeta ${index + 1}`}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
