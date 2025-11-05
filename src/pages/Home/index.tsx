@@ -18,7 +18,7 @@ import person2 from '@/assets/person2.png';
 import stars from '@/assets/stars.png';
 import { Card, StatistisCard, PlanCard } from '@/components/common/Card';
 import statisticsData from '@/data/statistics.json';
-import { useState, type ReactElement } from 'react';
+import { useState, useEffect, type ReactElement } from 'react';
 import sysConected from '@/assets/con-sys.png';
 import starsIcon from '@/assets/stars2.png';
 import performanceChart from '@/assets/performance-chart.png';
@@ -115,6 +115,17 @@ function FAQList(): ReactElement {
 
 export const HomePage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [currentCardIndex, setCurrentCardIndex] = useState<number>(0);
+
+  const cards = [retail, education, construction, bpo, security];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [cards.length]);
 
   return (
     <div className="flex flex-col items-center w-full overflow-x-hidden">
@@ -300,24 +311,36 @@ export const HomePage = () => {
 
       {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
       <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] flex flex-col items-center justify-start w-full sm:w-[95%]'>
-        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[65px] text-[#05234F] font-bold text-center w-full sm:w-[95%] md:w-[90%] lg:w-[900px] pt-8 sm:pt-12 md:pt-16 lg:pt-[120px] px-4 sm:px-6 lg:px-0 leading-tight sm:leading-[1.2] lg:leading-[65px]'>
+        <h2 className='text-2xl text-[#05234F] font-bold text-center w-full pt-8 px-4'>
           Automatiza tu reclutamiento, sin importar la industria
         </h2>
         <p className='text-[#888888] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[35px] font-[100] text-center py-3 sm:py-4 md:py-5 px-4 sm:px-6 lg:px-0'>
           Hoktus filtra, entrevista, revisa y valida por WhatsApp
         </p>
 
-        <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] mt-6 sm:mt-8 md:mt-12 lg:mt-[100px] w-full'>
-          <div className='w-full overflow-x-auto scroll-smooth' style={{ scrollPaddingLeft: '1rem', scrollPaddingRight: '1rem' }}>
-            <div className='flex flex-row items-center justify-start sm:justify-center gap-4 sm:gap-6 md:gap-8 min-w-max'>
-              <div className='flex-shrink-0 w-4 sm:w-6 md:w-8 lg:w-0'></div>
-              <Card bg={retail} />
-              <Card bg={education} />
-              <Card bg={construction} />
-              <Card bg={bpo} />
-              <Card bg={security} />
-              <div className='flex-shrink-0 w-4 sm:w-6 md:w-8 lg:w-0'></div>
+        <div className='flex flex-col items-center justify-center gap-6 sm:gap-8 pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] mt-6 sm:mt-8 md:mt-12 lg:mt-[100px] w-full'>
+          <div className='w-full flex items-center justify-center overflow-hidden relative'>
+            <div className='flex transition-transform duration-500 ease-in-out w-full' style={{ transform: `translateX(-${currentCardIndex * 100}%)` }}>
+              {cards.map((card, index) => (
+                <div key={index} className='w-full flex-shrink-0 flex justify-center px-4'>
+                  <Card bg={card} />
+                </div>
+              ))}
             </div>
+          </div>
+          
+          {/* Indicadores (dots) */}
+          <div className='flex items-center justify-center gap-2 mt-4'>
+            {cards.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentCardIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentCardIndex ? 'bg-[#1677FF] w-8' : 'bg-[#1677FF]/30 w-2'
+                }`}
+                aria-label={`Ir a tarjeta ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
