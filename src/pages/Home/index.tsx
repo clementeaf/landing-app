@@ -479,10 +479,11 @@ export const HomePage = () => {
           </p>
         </div>
 
-        <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] object-cover transform z-10 mt-[350px] absolute sm:mt-[170px] sm:ml-[350px]' />
+        <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] object-cover absolute transform z-[9999] mt-[350px] left-5 absolute sm:mt-[170px] sm:ml-[350px]' />
 
-        <div className='z-10 mt-[30px] sm:mt-[-125px]'>
-          <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[55px]' />
+        <div className='z-10 mt-[30px] sm:mt-[-125px] relative'>
+        <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute bottom-[-480px] left-5 z-0 left-0 z-[-1]' />
+          <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[15px]' />
         </div>
       </section>
 
