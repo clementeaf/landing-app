@@ -164,7 +164,7 @@ export function PlanCard({
       </div>
 
       <button
-        className={`w-full sm:w-[160px] lg:w-[172px] self-end py-2.5 sm:py-3 px-5 sm:px-6 rounded-[24px] sm:rounded-[30px] h-[50px] sm:h-[56px] lg:h-[60px] font-semibold text-sm sm:text-base text-white transition-colors mt-4 sm:mt-6 lg:mt-8 ${isPopular
+        className={`w-full sm:w-[160px] lg:w-[172px] self-end py-2.5 sm:py-3 px-5 sm:px-6 rounded-[24px] sm:rounded-[30px] min-h-[50px] sm:min-h-[56px] lg:min-h-[60px] h-auto sm:h-[56px] lg:h-[60px] font-semibold text-sm sm:text-base transition-colors mt-4 sm:mt-6 lg:mt-8 flex items-center justify-center ${isPopular
             ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
             : 'bg-[#FFFFFF] text-[#0048BE]'
           }`}
