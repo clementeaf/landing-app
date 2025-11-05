@@ -15,12 +15,10 @@ import circles from '@/assets/circles.png';
 import whatsapp from '@/assets/whatsapp.png';
 import chatSimulation from '@/assets/conversation.png';
 import person2 from '@/assets/person2.png';
-import stars from '@/assets/stars.png';
 import { Card, StatistisCard, PlanCard } from '@/components/common/Card';
 import statisticsData from '@/data/statistics.json';
 import { useState, useEffect, type ReactElement } from 'react';
 import sysConected from '@/assets/con-sys.png';
-import starsIcon from '@/assets/stars2.png';
 import performanceChart from '@/assets/performance-chart.png';
 import matias from '@/assets/maatias.png';
 import reciclapp from '@/assets/reciclapp.png';
@@ -270,22 +268,22 @@ export const HomePage = () => {
         {/* Images content */}
         <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden lg:overflow-visible h-auto mt-5 gap-[150px]">
           {/* Left Section - Woman with UI elements */}
-          <div className="relative w-auto min-w-[425px]" style={{ overflow: 'visible' }}>
-            <img
-              src={person}
-              alt="Persona usando Hoktus"
-              className="w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] object-contain sm:object-cover"
-            />
-
-            {/* Floating UI Element 1 - Performance */}
+          <div className="relative w-auto min-w-[425px]">
+            {/* Floating UI Element 1 - Performance (detrás de person) */}
             <img
               src={performanceChart}
               alt="Performance"
-              className="absolute top-0 left-[0px] w-[170px] sm:w-[250px] sm:left-[300px] object-cover overflow-visible"
+              className="absolute top-0 left-[0px] w-[190px] sm:w-[250px] sm:left-[300px] z-0 object-cover"
+            />
+
+            <img
+              src={person}
+              alt="Persona usando Hoktus"
+              className="relative w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] z-10 object-contain sm:object-cover"
             />
 
             {/* Floating UI Element 2 - Postulante Chat */}
-            <div className="absolute top-4 right-4 sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[100px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF]">
+            <div className="absolute top-[250px] right-[30px] sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[200px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-2 text-[#1677FF]">
               <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
               <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
             </div>
