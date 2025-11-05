@@ -120,11 +120,26 @@ export const HomePage = () => {
   const cards = [retail, education, construction, bpo, security];
 
   useEffect(() => {
+    const handleResize = (): void => {
+      if (window.innerWidth >= 640) {
+        return;
+      }
+    };
+
+    handleResize();
+
     const interval = setInterval(() => {
-      setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
+      if (window.innerWidth < 640) {
+        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
+      }
     }, 2000);
 
-    return () => clearInterval(interval);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', handleResize);
+    };
   }, [cards.length]);
 
   return (
@@ -245,8 +260,8 @@ export const HomePage = () => {
 
       {/* Porque Hoktus?*/} {/* Responsive */}
       <section className='flex flex-col items-center justify-center gap-6 py-[50px]'>
-        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-base'>
-          Porque Hoktus
+        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[25px] font-bold'>
+          Por qué Hoktus
         </button>
         <p className='text-[40px] font-bold text-[#012257] text-center px-4'>
           El camino inteligente para escalar tu reclutamiento
@@ -310,16 +325,17 @@ export const HomePage = () => {
       </section>
 
       {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
-      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] flex flex-col items-center justify-start w-full sm:w-[95%]'>
-        <h2 className='text-2xl text-[#05234F] font-bold text-center w-full pt-8 px-4'>
+      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[40px] flex flex-col items-center justify-start w-full sm:w-[95%]'>
+        <h2 className='text-2xl text-[#05234F] font-bold text-center w-full px-4 pt-6'>
           Automatiza tu reclutamiento, sin importar la industria
         </h2>
-        <p className='text-[#888888] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[35px] font-[100] text-center py-3 sm:py-4 md:py-5 px-4 sm:px-6 lg:px-0'>
+        <p className='text-[#888888] text-[20px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
           Hoktus filtra, entrevista, revisa y valida por WhatsApp
         </p>
 
-        <div className='flex flex-col items-center justify-center gap-6 sm:gap-8 pb-8 sm:pb-12 md:pb-16 lg:pb-[120px] mt-6 sm:mt-8 md:mt-12 lg:mt-[100px] w-full'>
-          <div className='w-full flex items-center justify-center overflow-hidden relative'>
+        <div className='flex flex-col items-center justify-center gap-6 py-4 w-full'>
+          {/* Carousel solo en móvil (< 640px) */}
+          <div className='w-full flex items-center justify-center overflow-hidden relative sm:hidden'>
             <div className='flex transition-transform duration-500 ease-in-out w-full' style={{ transform: `translateX(-${currentCardIndex * 100}%)` }}>
               {cards.map((card, index) => (
                 <div key={index} className='w-full flex-shrink-0 flex justify-center px-4'>
@@ -329,8 +345,17 @@ export const HomePage = () => {
             </div>
           </div>
 
-          {/* Indicadores (dots) */}
-          <div className='flex items-center justify-center gap-2 mt-4'>
+          {/* Layout normal en sm y superior (≥ 640px) - Todas en una línea */}
+          <div className='hidden sm:flex items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 w-full px-4 sm:px-6 lg:px-0 overflow-x-auto'>
+            {cards.map((card, index) => (
+              <div key={index} className='flex justify-center flex-shrink-0'>
+                <Card bg={card} />
+              </div>
+            ))}
+          </div>
+
+          {/* Indicadores (dots) - Solo en móvil */}
+          <div className='flex items-center justify-center gap-2 mt-4 sm:hidden'>
             {cards.map((_, index) => (
               <button
                 key={index}

@@ -17,8 +17,8 @@ interface StatisticsCardProps {
  */
 export function Card({ bg }: CardProps): ReactElement {
   return (
-    <div className='w-[200px] sm:w-[240px] md:w-[270px] lg:w-[296px] h-[300px] sm:h-[350px] md:h-[390px] lg:h-[423px] bg-[#EBF3FF] rounded-[16px] sm:rounded-[20px] lg:rounded-[25.19px] border border-[#9B9B9B]/20 p-3 sm:p-4 flex-shrink-0'>
-      <img src={bg} alt="background" className='w-full h-full object-cover rounded-[12px] sm:rounded-[16px] lg:rounded-lg' />
+    <div className='w-[220px] h-[320px] bg-[#EBF3FF] rounded-[16px] border border-[#9B9B9B]/20 p-3'>
+      <img src={bg} alt="background" className='w-full h-full object-cover rounded-[12px] lg:rounded-lg' />
     </div>
   )
 }
