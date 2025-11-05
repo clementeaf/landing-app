@@ -96,7 +96,7 @@ export function PlanCard({
   currencyBadge = '$ USD',
 }: PlanCardProps): ReactElement {
   return (
-    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] p-6 sm:p-7 w-full h-auto flex flex-col sm:min-h-[1040px] items-start' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
+    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] p-6 sm:p-7 w-full h-auto flex flex-col sm:min-h-[1040px] items-start relative' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
       {isPopular && (
         <div className='absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[2px] sm:border-[3px] border-[#B0D1FF] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full'>
           <span className='text-white text-xs sm:text-sm font-semibold'>Mas popular</span>
@@ -104,7 +104,7 @@ export function PlanCard({
       )}
 
       {currencyBadge && (
-        <div className='absolute top-4 right-4 sm:top-5 sm:right-5 lg:top-6 lg:right-6 bg-[#215FC4]/50 px-2 sm:px-3 py-1 rounded-full'>
+        <div className='absolute top-4 right-4 bg-[#215FC4]/50 py-1 rounded-full flex items-center justify-center px-3 py-2'>
           <span className='text-white text-[10px] sm:text-xs font-medium'>{currencyBadge}</span>
         </div>
       )}
