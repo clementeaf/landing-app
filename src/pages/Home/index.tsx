@@ -48,7 +48,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps): ReactEle
         onClick={onToggle}
         className='w-full flex items-center justify-between text-left'
       >
-        <h3 className={`text-[24px] font-normal text-[#1677FF] w-full`}>
+        <h3 className={`text-[16px] font-normal text-[#1677FF] w-full`}>
           {question}
         </h3>
         <svg
@@ -61,7 +61,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps): ReactEle
         </svg>
       </button>
       {isOpen && (
-        <p className='text-[#293753] text-[19px] font-light mt-4 leading-relaxed'>
+        <p className='text-[#293753] text-[14px] text-justify font-light mt-4 leading-relaxed'>
           {answer}
         </p>
       )}
@@ -260,10 +260,10 @@ export const HomePage = () => {
 
       {/* Porque Hoktus?*/} {/* Responsive */}
       <section className='flex flex-col items-center justify-center gap-6 py-[50px]'>
-        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[25px] font-bold'>
+        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[14px] font-[400]'>
           Por qué Hoktus
         </button>
-        <p className='text-[40px] font-bold text-[#012257] text-center px-4'>
+        <p className='text-[28px] w-[85%] sm:text-[30px]  font-normal text-[#012257] text-center px-4'>
           El camino inteligente para escalar tu reclutamiento
         </p>
 
@@ -293,12 +293,12 @@ export const HomePage = () => {
 
           <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
             {/* Middle Section - Recruitment Card */}
-            <div className="flex flex-col items-start justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[307.5px] h-auto sm:h-[420px] lg:h-[464.38px]">
-              <img src={starsIcon} alt="Performance" className="w-8 h-8 sm:w-10 sm:h-10 mb-4 sm:mb-6" />
-              <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
+            <div className="flex flex-col items-start justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg p-6 sm:p-8 w-[90%] sm:w-[90%] h-auto">
+              {/* <img src={starsIcon} alt="Performance" className="w-8 h-8 sm:w-10 sm:h-10 mb-4 sm:mb-6" /> */}
+              <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-center">
                 Recluta más rápido con Hoktus AI
               </h2>
-              <p className="text-[#012257] text-base sm:text-[18px] mb-4 sm:mb-6 text-start flex-1">
+              <p className="text-[#012257] text-base sm:text-[18px] mb-4 sm:mb-6 text-justify flex-1">
                 Automatiza conversaciones, valida aptitudes y revisa antecedentes en un solo flujo. Recibe reportes en tiempo real y toma decisiones ágiles.
               </p>
               <button className="w-full px-6 py-3 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors text-sm sm:text-base">
@@ -325,11 +325,11 @@ export const HomePage = () => {
       </section>
 
       {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
-      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] rounded-[40px] flex flex-col items-center justify-start w-full sm:w-[95%]'>
-        <h2 className='text-2xl text-[#05234F] font-bold text-center w-full px-4 pt-6'>
+      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] flex flex-col items-center justify-start w-full sm:w-[95%] px-2'>
+        <h2 className='text-[20px] text-[#05234F] font-bold text-center w-full px-4 pt-6'>
           Automatiza tu reclutamiento, sin importar la industria
         </h2>
-        <p className='text-[#888888] text-[20px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
+        <p className='text-[#888888] text-[16px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
           Hoktus filtra, entrevista, revisa y valida por WhatsApp
         </p>
 
@@ -370,7 +370,7 @@ export const HomePage = () => {
       </section>
 
       {/* Los números hablan solos */} {/* Responsive */}
-      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-full p-4 mt-10 w-[85%] sm:w-[90%] '>
+      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-full p-4 mt-10 w-[85%] sm:w-[90%] pb-6'>
         <h2 className='text-[40px] text-[#FFFFFF] font-bold text-center w-full py-4 pb-10'>
           Los números <span className='text-[#1677FF]'>hablan</span>
         </h2>
@@ -449,10 +449,10 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-10 sm:mt-20'>
-        <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' />
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-10 sm:mt-20'>
+        {/* <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' /> */}
         <div className='flex flex-col absolute z-10'>
-          <h2 className='text-[#1677FF] text-[25px] mt-[75px] ml-[30px] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
+          <h2 className='text-[#1677FF] text-[25px] mt-[30px] ml-[30px] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
           </h2>
           <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center ml-[115px] py-2 gap-3 sm:ml-[120px] sm:mt-[80px] mt-5'>
@@ -513,11 +513,11 @@ export const HomePage = () => {
       <section className='bg-[#F7FAFF] w-full flex flex-col items-center justify-center py-12 px-8'>
         {/* FAQ Badge */}
         <div className='mb-8 rounded-[66px] bg-[#EBF3FF] px-6 py-2'>
-          <span className='text-[#1677FF] text-[20px] font-[600] sm:text-[24px] lg:font-[500]'>FAQ</span>
+          <span className='text-[#1677FF] text-[16px] font-[600] sm:text-[24px] lg:font-[500]'>FAQ</span>
         </div>
 
         {/* Main Title */}
-        <h2 className='text-[#05234F] text-[52px] font-bold text-center mb-16 max-w-[700px]'>
+        <h2 className='text-[#05234F] text-[26px] font-bold text-center mb-16 max-w-[700px]'>
           Nosotros responderemos todas tus preguntas
         </h2>
 
