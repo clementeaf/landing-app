@@ -471,7 +471,7 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-[70px] sm:mt-20'>
+      <section className='w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-[10px] sm:mt-20'>
         {/* <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' /> */}
         <div className='flex flex-col items-center justify-center absolute z-10'>
           <p className='font-cal-sans text-[#1677FF] text-[33px] mt-[70px] text-center w-[80%] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
@@ -554,8 +554,8 @@ export const HomePage = () => {
       {/* Hero - Footer: ¿Listo para automatizar tus procesos de forma conversacional? */}
       <section className='bg-[#02193B] rounded-t-[20px] sm:rounded-t-[40px] md:rounded-t-[60px] lg:rounded-t-[80px] w-full flex flex-col items-center justify-center py-4 sm:py-5 lg:py-[20px]'>
         {/* Top CTA Section */}
-        <div className='w-full sm:w-[95%] lg:w-[90%] h-auto sm:h-[242px] min-h-[200px] sm:min-h-[242px] flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between border-b border-[#FFFFFF]/10 px-4 sm:px-6 lg:px-0 py-6 sm:py-0 gap-6 sm:gap-0'>
-          <h2 className='font-cal-sans text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold max-w-full sm:max-w-[500px] md:max-w-[600px] lg:max-w-[733px] text-center sm:text-left'>
+        {/* <div className='w-full sm:w-[95%] lg:w-[90%] h-auto sm:h-[242px] min-h-[200px] sm:min-h-[242px] flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between border-b border-[#FFFFFF]/10 px-4 sm:px-6 lg:px-0 py-6 sm:py-0 gap-6 sm:gap-0'>
+          <h2 className='font-cal-sans text-white text-xl sm:text-2xl md:text-3xl font-bold max-w-full sm:max-w-[500px] text-center sm:text-left'>
             ¿LISTO PARA AUTOMATIZAR TUS PROCESOS DE FORMA CONVERSACIONAL?
           </h2>
           <div className='flex flex-col items-center sm:items-end gap-4 sm:gap-[30px]'>
@@ -566,7 +566,7 @@ export const HomePage = () => {
               <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[30px] sm:h-[40px]' />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Footer Content */}
         <div className='w-full sm:w-[95%] lg:w-[90%] flex flex-col sm:flex-row items-start justify-between py-4 sm:py-5 lg:py-[20px] border-b border-[#FFFFFF]/10 gap-6 sm:gap-8 lg:gap-12 px-4 sm:px-6 lg:px-0'>
@@ -576,7 +576,7 @@ export const HomePage = () => {
               <img src={logo} alt="Hoktus Logo" className='w-8' />
               <span className='text-white text-[35px] font-bold'>Hoktus</span>
             </div>
-            <p className='font-satoshi text-white text-[15px] text-center w-full'>
+            <p className='font-satoshi text-white text-[15px] text-center w-[80%]'>
               Plataforma de reclutamiento y automatización con IA conversacional.
             </p>
             <div className='flex flex-row items-center gap-2 mt-8'>
@@ -627,7 +627,7 @@ export const HomePage = () => {
 
         {/* Bottom Copyright Section */}
         <div className='w-full sm:w-[95%] lg:w-[90%] flex flex-col sm:flex-row items-center justify-center sm:justify-between py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-0 gap-4 sm:gap-0'>
-          <p className='font-satoshi text-white text-sm text-light'>
+          <p className='font-satoshi text-white text-sm text-light text-center'>
             Hoktus Inc. y sus subsidiarias - Todos los derechos reservados
           </p>
           <div className='flex flex-row gap-6'>

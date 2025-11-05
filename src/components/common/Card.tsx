@@ -143,14 +143,14 @@ export function PlanCard({
           </div>
 
           {additionals && additionals.length > 0 && (
-            <div className='flex flex-col gap-2 sm:gap-3'>
+            <div className='flex flex-col gap-2 sm:gap-3 w-full'>
               <h3 className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] font-semibold uppercase'>Adicional (Solicitar)</h3>
               <div className='h-[1px] bg-[#FFFFFF]'></div>
-              <div className='flex gap-2 w-full sm:flex-wrap sm:flex-row flex-wrap'>
+              <div className='flex gap-3 w-full sm:flex-wrap sm:flex-row flex-wrap'>
                 {additionals.map((additional, index) => (
                   <div
                     key={index}
-                    className='flex flex-col items-center justify-center bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] px-0 py-2 text-start sm:w-[100px] sm:flex-col sm:items-center sm:pl-0 w-[157px] h-[75px]'
+                    className='flex flex-col items-center justify-center bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] px-0 py-2 text-start sm:w-[100px] sm:flex-col sm:items-center sm:pl-0 w-[163.5px] h-[75px]'
                   >
                     <span className='text-[12px] text-[#FFFFFF] text-center'>{additional.text}</span>
                     {subtext && subtext[index] && (
