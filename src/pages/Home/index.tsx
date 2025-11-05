@@ -138,8 +138,8 @@ export const HomePage = () => {
               setCurrentCardIndex(1);
               setTimeout(() => {
                 setIsTransitioning(true);
-              }, 50);
-            }, 500);
+              }, 200);
+            }, 1000);
             return nextIndex;
           }
           return nextIndex;
@@ -329,8 +329,8 @@ export const HomePage = () => {
               <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
                 Conectados con tus sistemas
               </h2>
-              <p className="font-satoshi text-gray-600 text-base sm:text-[18px] leading-relaxed text-center w-[90%] sm:w-[290px]">
-                Nos integramos a tus sistemas para adaptarnos a ti. Si no tenemos integración, la desarrollamos.
+              <p className="font-satoshi text-gray-600 text-base sm:text-[18px] leading-relaxed text-center w-[85%] sm:w-[290px]">
+              Integramos tus plataformas mediante APIs seguras, garantizando eficiencia y continuidad operativa.
               </p>
             </div>
           </div>
@@ -372,7 +372,7 @@ export const HomePage = () => {
           </div>
 
           {/* Indicadores (dots) - Solo en móvil */}
-          <div className='flex items-center justify-center gap-2 mt-4 sm:hidden'>
+          <div className='flex items-center justify-center gap-2 sm:hidden'>
             {cards.map((_, index) => {
               const displayIndex = currentCardIndex === 0 ? cards.length - 1 :
                 currentCardIndex === infiniteCards.length - 1 ? 0 :
