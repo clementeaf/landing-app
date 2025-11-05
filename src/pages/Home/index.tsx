@@ -12,7 +12,6 @@ import clock from '@/assets/clock.png';
 import persons from '@/assets/persons.png';
 import chat from '@/assets/chat.png';
 import circles from '@/assets/circles.png';
-import whatsapp from '@/assets/whatsapp.png';
 import chatSimulation from '@/assets/conversation.png';
 import person2 from '@/assets/person2.png';
 import { Card, StatistisCard, PlanCard } from '@/components/common/Card';
@@ -46,7 +45,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps): ReactEle
         onClick={onToggle}
         className='w-full flex items-center justify-between text-left'
       >
-        <h3 className={`text-[16px] font-normal text-[#1677FF] w-full`}>
+        <h3 className={`font-cal-sans text-[16px] font-normal text-[#1677FF] w-full`}>
           {question}
         </h3>
         <svg
@@ -59,7 +58,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps): ReactEle
         </svg>
       </button>
       {isOpen && (
-        <p className='text-[#293753] text-[14px] text-justify font-light mt-4 leading-relaxed'>
+        <p className='font-satoshi text-[#293753] text-[14px] text-justify font-light mt-4 leading-relaxed'>
           {answer}
         </p>
       )}
@@ -257,13 +256,13 @@ export const HomePage = () => {
 
         {/* Hero Content - Centrado verticalmente con mejor distribución */}
         <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-8 sm:gap-5 md:gap-6 lg:gap-8 text-center text-white items-center flex-1 justify-center px-4 sm:px-6'>
-          <h1 className='text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2'>
+          <h1 className='font-cal-sans text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2'>
             Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos, no semanas
           </h1>
-          <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 block md:hidden'>
+          <p className='font-satoshi font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 block md:hidden'>
             Automatiza el reclutamiento con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span> sin sumar carga a tu equipo
           </p>
-          <p className='font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 hidden md:block'>
+          <p className='font-satoshi font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 hidden md:block'>
             Automatiza el reclutamiento y todos sus procesos administrativos por WhatsApp con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span>, sin sumar carga a tu equipo
           </p>
           <button className='flex items-center justify-center mt-6 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-6 xl:px-6 py-3 sm:py-4 md:py-5 lg:py-3 xl:py-4 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[220px] xl:w-[250px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[44px] xl:h-[50px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[22px] xl:rounded-[25px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-[#1677FF] font-semibold text-center'>
@@ -277,7 +276,7 @@ export const HomePage = () => {
         <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[14px] font-[400]'>
           Por qué Hoktus
         </button>
-        <p className='text-[28px] w-[85%] sm:text-[30px] font-semibold text-[#012257] text-center px-4'>
+        <p className='font-cal-sans text-[28px] w-[85%] sm:text-[30px] font-semibold text-[#012257] text-center px-4'>
           El camino inteligente para escalar tu reclutamiento
         </p>
 
@@ -300,8 +299,8 @@ export const HomePage = () => {
 
             {/* Floating UI Element 2 - Postulante Chat */}
             <div className="absolute top-[250px] right-[30px] sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[200px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-2 text-[#1677FF]">
-              <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
-              <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
+              <h3 className="font-cal-sans font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
+              <p className="font-satoshi text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
             </div>
           </div>
 
@@ -309,10 +308,10 @@ export const HomePage = () => {
             {/* Middle Section - Recruitment Card */}
             <div className="flex flex-col items-center justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg py-6 px-[15px] sm:p-8 w-[83%] sm:w-[90%] h-auto mb-10">
               {/* <img src={starsIcon} alt="Performance" className="w-8 h-8 sm:w-10 sm:h-10 mb-4 sm:mb-6" /> */}
-              <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-center">
+              <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-center">
                 Recluta más rápido con Hoktus AI
               </h2>
-              <p className="text-[#012257] text-[14px] sm:text-[18px] mb-4 sm:mb-6 text-center">
+              <p className="font-satoshi text-[#012257] text-[14px] sm:text-[18px] mb-4 sm:mb-6 text-center">
                 Automatiza conversaciones, valida aptitudes y revisa antecedentes en un solo flujo. Recibe reportes en tiempo real y toma decisiones ágiles.
               </p>
               <button className="w-full px-6 py-3 mt-2 bg-[#1677FF] text-white rounded-[47px] font-semibold transition-colors text-sm sm:text-base">
@@ -327,10 +326,10 @@ export const HomePage = () => {
                 alt="Conectados con tus sistemas"
                 className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-7 sm:mb-0"
               />
-              <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
+              <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
                 Conectados con tus sistemas
               </h2>
-              <p className="text-gray-600 text-base sm:text-[18px] leading-relaxed text-center w-[90%] sm:w-[290px]">
+              <p className="font-satoshi text-gray-600 text-base sm:text-[18px] leading-relaxed text-center w-[90%] sm:w-[290px]">
                 Nos integramos a tus sistemas para adaptarnos a ti. Si no tenemos integración, la desarrollamos.
               </p>
             </div>
@@ -340,10 +339,10 @@ export const HomePage = () => {
 
       {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
       <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] flex flex-col items-center justify-start w-full sm:w-[95%] px-2'>
-        <h2 className='text-[22px] mt-7 text-[#05234F] font-bold text-center w-[85%] px-4 pt-6'>
+        <h2 className='font-cal-sans text-[22px] mt-7 text-[#05234F] font-bold text-center w-[85%] px-4 pt-6'>
           Automatiza tu reclutamiento, sin importar la industria
         </h2>
-        <p className='text-[#888888] text-[14px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
+        <p className='font-satoshi text-[#888888] text-[14px] sm:text-[40px] sm:font-[200] font-[400] text-center py-3'>
           Hoktus filtra, entrevista, revisa y valida por WhatsApp
         </p>
 
@@ -394,7 +393,7 @@ export const HomePage = () => {
 
       {/* Los números hablan solos */} {/* Responsive */}
       <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-[93%] p-4 mt-10 w-[85%] sm:w-[90%] pb-6'>
-        <h2 className='text-[40px] text-[#FFFFFF] font-bold text-center w-full pt-8 pb-10' style={{ lineHeight: '1.2' }}>
+        <h2 className='font-cal-sans text-[40px] text-[#FFFFFF] font-bold text-center w-full pt-8 pb-10' style={{ lineHeight: '1.2' }}>
           Los números <span className='text-[#1677FF]'>hablan</span>
         </h2>
 
@@ -416,7 +415,7 @@ export const HomePage = () => {
 
       {/* Planes */}
       <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 px-4 sm:px-6 mt-10'>
-        <h2 className='text-[35px] sm:text-[60px] text-[#0048BE] font-[600] text-center mb-3'>
+        <h2 className='font-cal-sans text-[35px] sm:text-[60px] text-[#0048BE] font-[600] text-center mb-3'>
           Planes
         </h2>
 
@@ -475,7 +474,7 @@ export const HomePage = () => {
       <section className='w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-[70px] sm:mt-20'>
         {/* <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' /> */}
         <div className='flex flex-col items-center justify-center absolute z-10'>
-          <p className='text-[#1677FF] text-[33px] mt-[70px] text-center w-[80%] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
+          <p className='font-cal-sans text-[#1677FF] text-[33px] mt-[70px] text-center w-[80%] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
             Empieza a contratar en minutos.
           </p>
         </div>
@@ -503,12 +502,12 @@ export const HomePage = () => {
         </div>
 
         {/* Main Title */}
-        <h2 className='text-[#05234F] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-12 max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] w-full px-4'>
+        <h2 className='font-cal-sans text-[#05234F] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-12 max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] w-full px-4'>
           Caso de éxito
         </h2>
 
         {/* Testimonial Text */}
-        <p className='text-gray-500 text-base sm:text-lg md:text-xl lg:text-[24px] text-center max-w-full sm:max-w-[600px] md:max-w-[690px] mb-6 sm:mb-8 md:mb-12 leading-relaxed px-4'>
+        <p className='font-satoshi text-gray-500 text-base sm:text-lg md:text-xl lg:text-[24px] text-center max-w-full sm:max-w-[600px] md:max-w-[690px] mb-6 sm:mb-8 md:mb-12 leading-relaxed px-4'>
           Hoktus es genial. Antes, contratar y validar conductores y personal de faena era un dolor de cabeza. Ahora, el proceso es súmamente rápido. Nos olvidamos de revisar mil documentos y nos enfocamos en hacer crecer el negocio.
         </p>
 
@@ -523,8 +522,8 @@ export const HomePage = () => {
 
         {/* Name and Title */}
         <div className='flex items-center gap-2 mb-4'>
-          <p className='text-[#1677FF] text-[16px] font-semibold'>Matías Romero, </p>
-          <p className='text-[#1677FF] text-[16px] font-light'>Co-fundador</p>
+          <p className='font-satoshi text-[#1677FF] text-[16px] font-semibold'>Matías Romero, </p>
+          <p className='font-satoshi text-[#1677FF] text-[16px] font-light'>Co-fundador</p>
         </div>
 
         {/* Company Logo */}
@@ -541,7 +540,7 @@ export const HomePage = () => {
         </div>
 
         {/* Main Title */}
-        <h2 className='text-[#05234F] text-[26px] font-bold text-center mb-16 max-w-[700px]'>
+        <h2 className='font-cal-sans text-[#05234F] text-[26px] font-bold text-center mb-16 max-w-[700px]'>
           Nosotros responderemos todas tus preguntas
         </h2>
 
@@ -555,13 +554,13 @@ export const HomePage = () => {
       <section className='bg-[#02193B] rounded-t-[20px] sm:rounded-t-[40px] md:rounded-t-[60px] lg:rounded-t-[80px] w-full flex flex-col items-center justify-center py-4 sm:py-5 lg:py-[20px]'>
         {/* Top CTA Section */}
         <div className='w-full sm:w-[95%] lg:w-[90%] h-auto sm:h-[242px] min-h-[200px] sm:min-h-[242px] flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between border-b border-[#FFFFFF]/10 px-4 sm:px-6 lg:px-0 py-6 sm:py-0 gap-6 sm:gap-0'>
-          <h2 className='text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold max-w-full sm:max-w-[500px] md:max-w-[600px] lg:max-w-[733px] text-center sm:text-left'>
+          <h2 className='font-cal-sans text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold max-w-full sm:max-w-[500px] md:max-w-[600px] lg:max-w-[733px] text-center sm:text-left'>
             ¿LISTO PARA AUTOMATIZAR TUS PROCESOS DE FORMA CONVERSACIONAL?
           </h2>
           <div className='flex flex-col items-center sm:items-end gap-4 sm:gap-[30px]'>
             <div className='flex flex-row items-center gap-2 sm:gap-4 h-auto sm:h-[50px]'>
               <div className='flex flex-col items-center sm:items-end'>
-                <p className='text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>AI for Hiring One conversation. <span className='italic'>One hire</span>.</p>
+                <p className='font-satoshi text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>AI for Hiring One conversation. <span className='italic'>One hire</span>.</p>
               </div>
               <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[30px] sm:h-[40px]' />
             </div>
@@ -576,7 +575,7 @@ export const HomePage = () => {
               <img src={logo} alt="Hoktus Logo" className='w-8' />
               <span className='text-white text-[35px] font-bold'>Hoktus</span>
             </div>
-            <p className='text-white text-[15px] text-center w-full'>
+            <p className='font-satoshi text-white text-[15px] text-center w-full'>
               Plataforma de reclutamiento y automatización con IA conversacional.
             </p>
             <div className='flex flex-row items-center gap-2 mt-8'>
@@ -588,7 +587,7 @@ export const HomePage = () => {
           <div className='flex gap-8 w-full'>
             {/* Links */}
             <div className='flex flex-col gap-4 mt-4'>
-              <h4 className='text-white text-lg font-bold'>Links</h4>
+              <h4 className='font-cal-sans text-white text-lg font-bold'>Links</h4>
               <ul className='flex flex-col gap-2'>
                 <li><a href='#' className='text-white/60 text-light hover:underline'>Nosotros</a></li>
                 <li><a href='#' className='text-white/60 text-light hover:underline'>Funcionalidades</a></li>
@@ -599,7 +598,7 @@ export const HomePage = () => {
 
             {/* Follow */}
             <div className='flex flex-col gap-4 mt-4'>
-              <h4 className='text-white text-lg font-bold'>Follow</h4>
+              <h4 className='font-cal-sans text-white text-lg font-bold'>Follow</h4>
               <ul className='flex flex-col gap-2'>
                 <li><a href='#' className='text-white/60 text-light hover:underline'>LinkedIn</a></li>
                 <li><a href='#' className='text-white/60 text-light hover:underline'>Instagram</a></li>
@@ -608,8 +607,8 @@ export const HomePage = () => {
 
             {/* News */}
             <div className='flex flex-col gap-4 max-w-[300px] mt-4'>
-              <h4 className='text-white text-lg font-bold'>News</h4>
-              <p className='text-white/60 text-light'>Registrarme para recibir novedades</p>
+              <h4 className='font-cal-sans text-white text-lg font-bold'>News</h4>
+              <p className='font-satoshi text-white/60 text-light'>Registrarme para recibir novedades</p>
             </div>
           </div>
         </div>
@@ -627,7 +626,7 @@ export const HomePage = () => {
 
         {/* Bottom Copyright Section */}
         <div className='w-full sm:w-[95%] lg:w-[90%] flex flex-col sm:flex-row items-center justify-center sm:justify-between py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-0 gap-4 sm:gap-0'>
-          <p className='text-white text-sm text-light'>
+          <p className='font-satoshi text-white text-sm text-light'>
             Hoktus Inc. y sus subsidiarias - Todos los derechos reservados
           </p>
           <div className='flex flex-row gap-6'>
