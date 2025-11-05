@@ -170,32 +170,32 @@ export const HomePage = () => {
           {isMobileMenuOpen && (
             <>
               {/* Backdrop */}
-              <div 
+              <div
                 className="md:hidden fixed inset-0 bg-black/50 z-[45] transition-opacity duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               />
               {/* Menu Panel */}
               <div className="md:hidden fixed top-[80px] left-4 right-4 rounded-[20px] bg-[#FBFBFB]/10 backdrop-blur-sm p-4 transition-all duration-300 ease-in-out z-50 shadow-lg max-w-[395px]">
                 <div className="flex flex-col gap-3 mb-4">
-                  <p 
+                  <p
                     className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Funcionalidades
                   </p>
-                  <p 
+                  <p
                     className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Industrias
                   </p>
-                  <p 
+                  <p
                     className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Planes
                   </p>
-                  <p 
+                  <p
                     className="text-white text-base font-[100] cursor-pointer hover:text-[#1677FF] transition-colors py-1.5"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -206,14 +206,14 @@ export const HomePage = () => {
                   <div className="flex items-center gap-2 mb-2">
                     <img src={chile} alt="Chile" className="w-[28px] h-[28px]" />
                   </div>
-                  <button 
+                  <button
                     className='w-full px-4 py-3 rounded-[20px] bg-[#00122D] border border-[#91BBFF] text-white text-base font-medium'
                     onClick={() => setIsMobileMenuOpen(false)}
                     style={{ width: '100%', boxSizing: 'border-box' }}
                   >
                     Iniciar Sesión
                   </button>
-                  <button 
+                  <button
                     className='w-full px-4 py-3 rounded-[20px] bg-[#FFFFFF] text-[#1677FF] text-base font-medium'
                     onClick={() => setIsMobileMenuOpen(false)}
                     style={{ width: '100%', boxSizing: 'border-box' }}
@@ -256,24 +256,24 @@ export const HomePage = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden lg:overflow-visible h-auto mt-5 gap-[150px]">
           {/* Left Section - Woman with UI elements */}
           <div className="relative w-auto min-w-[425px]" style={{ overflow: 'visible' }}>
-              <img
-                src={person}
-                alt="Persona usando Hoktus"
-                className="w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] object-contain sm:object-cover"
-              />
+            <img
+              src={person}
+              alt="Persona usando Hoktus"
+              className="w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] object-contain sm:object-cover"
+            />
 
-              {/* Floating UI Element 1 - Performance */}
-              <img 
-                src={performanceChart} 
-                alt="Performance" 
-                className="absolute top-0 left-[0px] w-[170px] sm:w-[250px] sm:left-[300px] object-cover overflow-visible" 
-              />
+            {/* Floating UI Element 1 - Performance */}
+            <img
+              src={performanceChart}
+              alt="Performance"
+              className="absolute top-0 left-[0px] w-[170px] sm:w-[250px] sm:left-[300px] object-cover overflow-visible"
+            />
 
-              {/* Floating UI Element 2 - Postulante Chat */}
-              <div className="absolute top-4 right-4 sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[100px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF]">
-                <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
-                <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
-              </div>
+            {/* Floating UI Element 2 - Postulante Chat */}
+            <div className="absolute top-4 right-4 sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[100px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-1.5 sm:p-2 px-2 sm:px-3 lg:px-4 text-[#1677FF]">
+              <h3 className="font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
+              <p className="text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
+            </div>
           </div>
 
           <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
@@ -293,10 +293,10 @@ export const HomePage = () => {
 
             {/* Right Section - Systems Connection Card */}
             <div className="flex flex-col items-start bg-white rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[420px] h-auto lg:h-[464px]">
-              <img 
-                src={sysConected} 
-                alt="Conectados con tus sistemas" 
-                className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-4 sm:mb-0" 
+              <img
+                src={sysConected}
+                alt="Conectados con tus sistemas"
+                className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-4 sm:mb-0"
               />
               <h2 className="text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
                 Conectados con tus sistemas
@@ -328,16 +328,15 @@ export const HomePage = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Indicadores (dots) */}
           <div className='flex items-center justify-center gap-2 mt-4'>
             {cards.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentCardIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentCardIndex ? 'bg-[#1677FF] w-8' : 'bg-[#1677FF]/30 w-2'
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentCardIndex ? 'bg-[#1677FF] w-8' : 'bg-[#1677FF]/30 w-2'
+                  }`}
                 aria-label={`Ir a tarjeta ${index + 1}`}
               />
             ))}
@@ -428,13 +427,13 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] w-full sm:w-[95%] lg:w-[90%] h-auto sm:h-[450px] min-h-[400px] sm:min-h-[450px] flex items-center relative overflow-hidden lg:overflow-visible mt-8 sm:mt-12 md:mt-16 lg:mt-[120px] px-4 sm:px-6 lg:px-0'>
-        <img src={stars} alt="Stars icon" className='w-[40px] sm:w-[60px] lg:w-[80px] absolute top-4 sm:top-6 lg:top-10 left-4 sm:left-6 lg:left-10 z-10' />
-        <div className='flex flex-col absolute top-12 sm:top-16 lg:top-20 left-4 sm:left-8 md:left-12 lg:left-[200px] w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] md:w-[calc(100%-6rem)] lg:w-[685px] gap-8 sm:gap-12 lg:gap-20 z-10'>
-          <h2 className='text-[#1677FF] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>
+      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] w-full h-[550px]'>
+        <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-10' />
+        <div className='flex flex-col absolute z-10'>
+          <h2 className='text-[#1677FF] text-[30px] mt-[75px] ml-[50px] font-bold'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
           </h2>
-          <button className='bg-[#1677FF] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2 sm:gap-3 w-fit hover:bg-[#0050CC] transition-colors'>
+          <button className='bg-[#1677FF] text-white px-4 rounded-[15px] font-semibold hover:bg-[#0050CC] w-[250px] flex items-center justify-center ml-[90px] py-1 gap-3'>
             Probar Hoktus
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -442,11 +441,11 @@ export const HomePage = () => {
           </button>
         </div>
 
-        <img src={chatSimulation} alt="Chat Simulation" className='w-[150px] sm:w-[200px] md:w-[250px] lg:w-[300px] object-cover absolute top-[250px] sm:top-[280px] md:top-[200px] left-1/2 sm:left-auto sm:right-4 md:right-8 lg:left-[600px] transform -translate-x-1/2 sm:translate-x-0 z-10 hidden sm:block' />
+        <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] object-cover transform z-10 mt-[350px] absolute' />
 
-        <div className='absolute right-0 bottom-0 z-10 hidden lg:block'>
-          <img src={whatsapp} alt="WhatsApp" className='absolute top-[150px] right-[150px] w-[57px] z-20' />
-          <img src={person2} alt="Professional woman" className='w-[600px] h-auto object-contain relative bottom-0' />
+        <div className='z-10 mt-[70px]'>
+          <img src={whatsapp} alt="WhatsApp" className='w-[40px] absolute mt-[190px] right-[60px]' />
+          <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[55px]' />
         </div>
       </section>
 
