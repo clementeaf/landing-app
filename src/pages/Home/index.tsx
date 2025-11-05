@@ -370,8 +370,8 @@ export const HomePage = () => {
       </section>
 
       {/* Los números hablan solos */} {/* Responsive */}
-      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] flex flex-col items-center justify-start w-full p-4 sm:p-6 lg:p-4 py-8 sm:py-12 md:py-16 lg:py-[120px] mt-8 sm:mt-12 md:mt-16 lg:mt-[120px]'>
-        <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[75px] text-[#FFFFFF] font-bold text-center w-full sm:w-[95%] md:w-[90%] lg:w-[900px] mb-6 sm:mb-8 md:mb-12 lg:mb-[100px] px-4 sm:px-6 lg:px-0'>
+      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-full p-4 mt-10 w-[85%] sm:w-[90%] '>
+        <h2 className='text-[40px] text-[#FFFFFF] font-bold text-center w-full py-4 pb-10'>
           Los números <span className='text-[#1677FF]'>hablan</span>
         </h2>
 
@@ -392,13 +392,10 @@ export const HomePage = () => {
       </section>
 
       {/* Planes */}
-      <section className='bg-gradient-to-br from-[#FFFFFF] to-[#E9F2FF] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] lg:rounded-[80px] w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-0'>
-        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[65px] text-[#0048BE] font-bold text-center mb-3 sm:mb-4 px-4 sm:px-6 lg:px-0'>
+      <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-0'>
+        <h2 className='text-[40px] sm:text-[60px] text-[#0048BE] font-bold text-center mb-3'>
           Planes
         </h2>
-        <p className='text-[#828282] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[30px] font-[100] text-center mb-6 sm:mb-8 md:mb-12 lg:mb-[100px] px-4 sm:px-6 lg:px-0'>
-          Elige el plan que se adapta a tu forma de contratar
-        </p>
 
         <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-center w-full px-4 sm:px-6 lg:px-0'>
           <PlanCard
@@ -453,7 +450,7 @@ export const HomePage = () => {
 
       {/* Hero: Empieza a contratar */}
       <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] rounded-[20px] w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-10 sm:mt-20'>
-        <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]'/>
+        <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' />
         <div className='flex flex-col absolute z-10'>
           <h2 className='text-[#1677FF] text-[25px] mt-[75px] ml-[30px] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
             Empieza a contratar en minutos. Sin fricción, sin estrés.
@@ -478,7 +475,7 @@ export const HomePage = () => {
       <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10'>
         {/* Testimonio Badge */}
         <div className='bg-[#EBF3FF] px-4 sm:px-6 py-2 rounded-full mb-6 sm:mb-8'>
-          <span className='text-[#1677FF] text-xs sm:text-sm font-light'>Testimonio</span>
+          <span className='text-[#1677FF] text-[16px] font-[600] sm:text-[20px]'>Testimonio</span>
         </div>
 
         {/* Main Title */}
@@ -513,10 +510,10 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Nosotros respondemos todas tus preguntas */}
-      <section className='bg-[#F7FAFF] w-full flex flex-col items-center justify-center py-[120px] px-8'>
+      <section className='bg-[#F7FAFF] w-full flex flex-col items-center justify-center py-12 px-8'>
         {/* FAQ Badge */}
         <div className='mb-8 rounded-[66px] bg-[#EBF3FF] px-6 py-2'>
-          <span className='text-[#1677FF] text-[16px] font-semibold'>FAQ</span>
+          <span className='text-[#1677FF] text-[20px] font-[600] sm:text-[24px] lg:font-[500]'>FAQ</span>
         </div>
 
         {/* Main Title */}
@@ -549,10 +546,9 @@ export const HomePage = () => {
           <div className='flex flex-col items-center sm:items-end gap-4 sm:gap-[30px]'>
             <div className='flex flex-row items-center gap-2 sm:gap-4 h-auto sm:h-[50px]'>
               <div className='flex flex-col items-center sm:items-end'>
-                <p className='text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>AI for Hiring</p>
-                <p className='text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>One conversation. <span className='italic'>One hire</span>.</p>
+                <p className='text-white text-sm sm:text-base md:text-lg lg:text-[23.36px]'>AI for Hiring One conversation. <span className='italic'>One hire</span>.</p>
               </div>
-              <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[30px] sm:h-[40px] lg:h-[50px]' />
+              <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[30px] sm:h-[40px]' />
             </div>
             <button className='bg-white text-[#000E2] h-[40px] sm:h-[46px] w-[160px] sm:w-[175px] rounded-[24.5px] flex items-center justify-center font-normal text-sm sm:text-base lg:text-lg mt-0 sm:mt-10'>
               Agendar reunión
@@ -563,12 +559,12 @@ export const HomePage = () => {
         {/* Main Footer Content */}
         <div className='w-full sm:w-[95%] lg:w-[90%] flex flex-col sm:flex-row items-start justify-between py-4 sm:py-5 lg:py-[20px] border-b border-[#FFFFFF]/10 gap-6 sm:gap-8 lg:gap-12 px-4 sm:px-6 lg:px-0'>
           {/* Hoktus Info */}
-          <div className='flex flex-col gap-6 max-w-[300px] items-start justify-start'>
+          <div className='flex flex-col gap-6 w-full items-center justify-start'>
             <div className='flex flex-row items-center gap-3'>
-              <img src={logo} alt="Hoktus Logo" className='w-8 h-8' />
-              <span className='text-white text-[60px] font-bold'>Hoktus</span>
+              <img src={logo} alt="Hoktus Logo" className='w-8' />
+              <span className='text-white text-[35px] font-bold'>Hoktus</span>
             </div>
-            <p className='text-white text-base'>
+            <p className='text-white text-[15px] text-center w-full'>
               Plataforma de reclutamiento y automatización con IA conversacional.
             </p>
             <div className='flex flex-row items-center gap-2 mt-8'>
@@ -577,39 +573,44 @@ export const HomePage = () => {
             </div>
           </div>
 
-          {/* Links */}
-          <div className='flex flex-col gap-4 mt-4'>
-            <h4 className='text-white text-lg font-bold'>Links</h4>
-            <ul className='flex flex-col gap-2'>
-              <li><a href='#' className='text-white/60 text-light hover:underline'>Nosotros</a></li>
-              <li><a href='#' className='text-white/60 text-light hover:underline'>Funcionalidades</a></li>
-              <li><a href='#' className='text-white/60 text-light hover:underline'>Planes</a></li>
-              <li><a href='#' className='text-white/60 text-light hover:underline'>Contacto</a></li>
-            </ul>
-          </div>
+          <div className='flex gap-8 w-full'>
+            {/* Links */}
+            <div className='flex flex-col gap-4 mt-4'>
+              <h4 className='text-white text-lg font-bold'>Links</h4>
+              <ul className='flex flex-col gap-2'>
+                <li><a href='#' className='text-white/60 text-light hover:underline'>Nosotros</a></li>
+                <li><a href='#' className='text-white/60 text-light hover:underline'>Funcionalidades</a></li>
+                <li><a href='#' className='text-white/60 text-light hover:underline'>Planes</a></li>
+                <li><a href='#' className='text-white/60 text-light hover:underline'>Contacto</a></li>
+              </ul>
+            </div>
 
-          {/* Follow */}
-          <div className='flex flex-col gap-4 mt-4'>
-            <h4 className='text-white text-lg font-bold'>Follow</h4>
-            <ul className='flex flex-col gap-2'>
-              <li><a href='#' className='text-white/60 text-light hover:underline'>LinkedIn</a></li>
-              <li><a href='#' className='text-white/60 text-light hover:underline'>Instagram</a></li>
-            </ul>
-          </div>
+            {/* Follow */}
+            <div className='flex flex-col gap-4 mt-4'>
+              <h4 className='text-white text-lg font-bold'>Follow</h4>
+              <ul className='flex flex-col gap-2'>
+                <li><a href='#' className='text-white/60 text-light hover:underline'>LinkedIn</a></li>
+                <li><a href='#' className='text-white/60 text-light hover:underline'>Instagram</a></li>
+              </ul>
+            </div>
 
-          {/* News */}
-          <div className='flex flex-col gap-4 max-w-[300px] mt-4'>
-            <h4 className='text-white text-lg font-bold'>News</h4>
-            <p className='text-white/60 text-light'>Registrarme para recibir novedades</p>
-            <input
-              type='email'
-              placeholder='Correo electrónico'
-              className='bg-transparent border border-[#FFFFFF] text-white px-4 py-3 rounded-lg focus:outline-none focus:border-[#1677FF] placeholder:text-gray-400 rounded-[24.5px]'
-            />
-            <button className='bg-white text-[#01122D] px-6 py-3 text-light rounded-[24.5px] w-[124px] h-[46px] flex items-center justify-center'>
-              Suscribirme
-            </button>
+            {/* News */}
+            <div className='flex flex-col gap-4 max-w-[300px] mt-4'>
+              <h4 className='text-white text-lg font-bold'>News</h4>
+              <p className='text-white/60 text-light'>Registrarme para recibir novedades</p>
+            </div>
           </div>
+        </div>
+
+        <div className='flex flex-col w-[90%] py-4 gap-4'>
+        <input
+          type='email'
+          placeholder='Correo electrónico'
+          className='bg-transparent border border-[#FFFFFF] text-white px-4 py-3 rounded-lg focus:outline-none focus:border-[#1677FF] placeholder:text-gray-400 rounded-[24.5px]'
+        />
+        <button className='bg-white text-[#01122D] text-light rounded-[24.5px] w-full h-[46px] flex items-center justify-center'>
+          Suscribirme
+        </button>
         </div>
 
         {/* Bottom Copyright Section */}

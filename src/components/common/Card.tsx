@@ -96,7 +96,7 @@ export function PlanCard({
   currencyBadge = '$ USD',
 }: PlanCardProps): ReactElement {
   return (
-    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] p-6 sm:p-7 lg:p-8 relative w-full lg:w-[620px] xl:w-[656px] h-auto lg:h-[861px] flex flex-col min-h-[600px] sm:min-h-[650px] lg:min-h-[715px] items-start' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
+    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] p-6 sm:p-7 w-full h-auto flex flex-col sm:min-h-[1040px] items-start' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
       {isPopular && (
         <div className='absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[2px] sm:border-[3px] border-[#B0D1FF] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full'>
           <span className='text-white text-xs sm:text-sm font-semibold'>Mas popular</span>
@@ -145,15 +145,15 @@ export function PlanCard({
             <div className='flex flex-col gap-2 sm:gap-3'>
               <h3 className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] font-semibold uppercase'>Adicional (Solicitar)</h3>
               <div className='h-[1px] bg-[#FFFFFF]'></div>
-              <div className='flex flex-wrap gap-2'>
+              <div className='flex flex-col gap-2 w-full sm:flex-wrap sm:flex-row'>
                 {additionals.map((additional, index) => (
                   <div
                     key={index}
-                    className='relative flex flex-col items-center justify-center w-[100px] sm:w-[110px] md:w-[120px] lg:w-[124.65px] h-[60px] sm:h-[70px] lg:h-[78px] bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] sm:rounded-[10px] p-2 sm:p-3 lg:p-4'
+                    className='flex items-center pl-4 bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] py-2 gap-2 text-start sm:w-[100px] sm:flex-col sm:items-center sm:pl-0'
                   >
-                    <span className='text-[11px] sm:text-[12px] lg:text-[13px] text-[#FFFFFF] text-center leading-tight'>{additional.text}</span>
+                    <span className='text-[12px] text-[#FFFFFF] text-center'>{additional.text}</span>
                     {subtext && subtext[index] && (
-                      <span className='text-[9px] sm:text-[10px] lg:text-[11px] text-[#FFFFFF]/70 text-center mt-1'>{subtext[index].text}</span>
+                      <span className='text-[12px] text-[#FFFFFF]/70 text-center'>{subtext[index].text}</span>
                     )}
                   </div>
                 ))}
@@ -165,8 +165,8 @@ export function PlanCard({
 
       <button
         className={`w-full sm:w-[160px] lg:w-[172px] self-end py-2.5 sm:py-3 px-5 sm:px-6 rounded-[24px] sm:rounded-[30px] min-h-[50px] sm:min-h-[56px] lg:min-h-[60px] h-auto sm:h-[56px] lg:h-[60px] font-semibold text-sm sm:text-base transition-colors mt-4 sm:mt-6 lg:mt-8 flex items-center justify-center ${isPopular
-            ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
-            : 'bg-[#FFFFFF] text-[#0048BE]'
+          ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
+          : 'bg-[#FFFFFF] text-[#0048BE]'
           }`}
       >
         {ctaText}
