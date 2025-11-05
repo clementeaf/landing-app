@@ -96,9 +96,10 @@ export function PlanCard({
   currencyBadge = '$ USD',
 }: PlanCardProps): ReactElement {
   return (
-    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] p-6 sm:p-7 w-full h-auto flex flex-col sm:min-h-[1040px] items-start relative' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
+    <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] p-6 sm:p-7 w-full
+     h-auto flex flex-col sm:min-h-[1040px] items-start relative' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
       {isPopular && (
-        <div className='absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[2px] sm:border-[3px] border-[#B0D1FF] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full'>
+        <div className='absolute top-[-17px] sm:-top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[2px] sm:border-[3px] border-[#B0D1FF] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full flex items-center justify-center'>
           <span className='text-white text-xs sm:text-sm font-semibold'>Mas popular</span>
         </div>
       )}
@@ -145,15 +146,15 @@ export function PlanCard({
             <div className='flex flex-col gap-2 sm:gap-3'>
               <h3 className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] font-semibold uppercase'>Adicional (Solicitar)</h3>
               <div className='h-[1px] bg-[#FFFFFF]'></div>
-              <div className='flex flex-col gap-2 w-full sm:flex-wrap sm:flex-row'>
+              <div className='flex gap-2 w-full sm:flex-wrap sm:flex-row flex-wrap'>
                 {additionals.map((additional, index) => (
                   <div
                     key={index}
-                    className='flex items-center pl-4 bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] py-2 gap-2 text-start sm:w-[100px] sm:flex-col sm:items-center sm:pl-0'
+                    className='flex flex-col items-center justify-center bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] px-0 py-2 text-start sm:w-[100px] sm:flex-col sm:items-center sm:pl-0 w-[157px] h-[75px]'
                   >
                     <span className='text-[12px] text-[#FFFFFF] text-center'>{additional.text}</span>
                     {subtext && subtext[index] && (
-                      <span className='text-[12px] text-[#FFFFFF]/70 text-center'>{subtext[index].text}</span>
+                      <span className='text-[12px] text-[#FFFFFF]/70 text-center w-[120px]'>{subtext[index].text}</span>
                     )}
                   </div>
                 ))}

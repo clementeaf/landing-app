@@ -350,9 +350,9 @@ export const HomePage = () => {
         <div className='flex flex-col items-center justify-center gap-6 py-4 w-full'>
           {/* Carousel solo en móvil (< 640px) */}
           <div className='w-full flex items-center justify-center overflow-hidden relative sm:hidden'>
-            <div 
+            <div
               ref={carouselRef}
-              className={`flex w-full ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`} 
+              className={`flex w-full ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
               style={{ transform: `translateX(-${currentCardIndex * 100}%)` }}
             >
               {infiniteCards.map((card, index) => (
@@ -375,9 +375,9 @@ export const HomePage = () => {
           {/* Indicadores (dots) - Solo en móvil */}
           <div className='flex items-center justify-center gap-2 mt-4 sm:hidden'>
             {cards.map((_, index) => {
-              const displayIndex = currentCardIndex === 0 ? cards.length - 1 : 
-                                   currentCardIndex === infiniteCards.length - 1 ? 0 : 
-                                   currentCardIndex - 1;
+              const displayIndex = currentCardIndex === 0 ? cards.length - 1 :
+                currentCardIndex === infiniteCards.length - 1 ? 0 :
+                  currentCardIndex - 1;
               return (
                 <button
                   key={index}
@@ -393,8 +393,8 @@ export const HomePage = () => {
       </section>
 
       {/* Los números hablan solos */} {/* Responsive */}
-      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-full p-4 mt-10 w-[85%] sm:w-[90%] pb-6'>
-        <h2 className='text-[40px] text-[#FFFFFF] font-bold text-center w-full py-4 pb-10'>
+      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-[93%] p-4 mt-10 w-[85%] sm:w-[90%] pb-6'>
+        <h2 className='text-[40px] text-[#FFFFFF] font-bold text-center w-full pt-8 pb-10' style={{ lineHeight: '1.2' }}>
           Los números <span className='text-[#1677FF]'>hablan</span>
         </h2>
 
@@ -415,12 +415,12 @@ export const HomePage = () => {
       </section>
 
       {/* Planes */}
-      <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-0'>
-        <h2 className='text-[40px] sm:text-[60px] text-[#0048BE] font-bold text-center mb-3'>
+      <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 px-4 sm:px-6 mt-10'>
+        <h2 className='text-[35px] sm:text-[60px] text-[#0048BE] font-[600] text-center mb-3'>
           Planes
         </h2>
 
-        <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-center w-full px-4 sm:px-6 lg:px-0'>
+        <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-center w-full sm:px-6'>
           <PlanCard
             title="Plan Standard"
             price="$490"
@@ -472,30 +472,31 @@ export const HomePage = () => {
       </section>
 
       {/* Hero: Empieza a contratar */}
-      <section className='bg-gradient-to-br from-[#EBF3FF] to-[#FFFFFF] w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-10 sm:mt-20'>
+      <section className='w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-[70px] sm:mt-20'>
         {/* <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' /> */}
-        <div className='flex flex-col absolute z-10'>
-          <h2 className='text-[#1677FF] text-[25px] mt-[30px] ml-[30px] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
-            Empieza a contratar en minutos. Sin fricción, sin estrés.
-          </h2>
-          <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center ml-[115px] py-2 gap-3 sm:ml-[120px] sm:mt-[80px] mt-5'>
-            Probar Hoktus
-            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+        <div className='flex flex-col items-center justify-center absolute z-10'>
+          <p className='text-[#1677FF] text-[33px] mt-[70px] text-center w-[80%] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
+            Empieza a contratar en minutos.
+          </p>
         </div>
 
         <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] object-cover transform z-10 mt-[350px] absolute sm:mt-[170px] sm:ml-[350px]' />
 
         <div className='z-10 mt-[30px] sm:mt-[-125px]'>
-          <img src={whatsapp} alt="WhatsApp" className='w-[40px] absolute mt-[190px] right-[60px] sm:right-[100px]' />
           <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[55px]' />
         </div>
       </section>
 
+      <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center py-2 gap-3 sm:ml-[120px] sm:mt-[80px] my-10'>
+        Probar Hoktus
+        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
       {/* Hero: Que dicen las empresas sobre Hoktus */}
-      <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10'>
+      <div className='w-full h-[20px] bg-[#EBF3FF] mt-[20px]' />
+      <section className='w-full sm:w-[95%] lg:w-[90%] flex flex-col items-center justify-center py-8 sm:py-12 md:py-16 lg:py-[120px] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 rounded-t-[40px]'>
         {/* Testimonio Badge */}
         <div className='bg-[#EBF3FF] px-4 sm:px-6 py-2 rounded-full mb-6 sm:mb-8'>
           <span className='text-[#1677FF] text-[16px] font-[600] sm:text-[20px]'>Testimonio</span>
@@ -503,11 +504,11 @@ export const HomePage = () => {
 
         {/* Main Title */}
         <h2 className='text-[#05234F] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-12 max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] w-full px-4'>
-          ¿Qué están diciendo las empresas sobre Hoktus?
+          Caso de éxito
         </h2>
 
         {/* Testimonial Text */}
-        <p className='text-[#001844] text-base sm:text-lg md:text-xl lg:text-[24px] text-center max-w-full sm:max-w-[600px] md:max-w-[690px] mb-6 sm:mb-8 md:mb-12 leading-relaxed px-4'>
+        <p className='text-gray-500 text-base sm:text-lg md:text-xl lg:text-[24px] text-center max-w-full sm:max-w-[600px] md:max-w-[690px] mb-6 sm:mb-8 md:mb-12 leading-relaxed px-4'>
           Hoktus es genial. Antes, contratar y validar conductores y personal de faena era un dolor de cabeza. Ahora, el proceso es súmamente rápido. Nos olvidamos de revisar mil documentos y nos enfocamos en hacer crecer el negocio.
         </p>
 
@@ -516,24 +517,24 @@ export const HomePage = () => {
           <img
             src={matias}
             alt="Matías Romero"
-            className='w-24 h-24 rounded-full object-cover border-2 border-[#1677FF]/20'
+            className='w-16 rounded-full object-cover border-2 border-[#1677FF]/20 mt-6'
           />
         </div>
 
         {/* Name and Title */}
-        <div className='flex items-center gap-2 mb-8'>
-          <p className='text-[#1677FF] text-[20px] font-semibold'>Matías Romero, </p>
-          <p className='text-[#1677FF] text-[20px] font-light'>Co-fundador</p>
+        <div className='flex items-center gap-2 mb-4'>
+          <p className='text-[#1677FF] text-[16px] font-semibold'>Matías Romero, </p>
+          <p className='text-[#1677FF] text-[16px] font-light'>Co-fundador</p>
         </div>
 
         {/* Company Logo */}
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 mb-8'>
           <img src={reciclapp} alt="Reciclapp" className='w-[125px] h-[16px]' />
         </div>
       </section>
 
       {/* Hero: Nosotros respondemos todas tus preguntas */}
-      <section className='bg-[#F7FAFF] w-full flex flex-col items-center justify-center py-12 px-8'>
+      <section className='bg-[#F7FAFF] w-full flex flex-col items-center justify-center py-14 px-8'>
         {/* FAQ Badge */}
         <div className='mb-8 rounded-[66px] bg-[#EBF3FF] px-6 py-2'>
           <span className='text-[#1677FF] text-[16px] font-[600] sm:text-[24px] lg:font-[500]'>FAQ</span>
@@ -548,15 +549,6 @@ export const HomePage = () => {
         <div className='w-full sm:w-[95%] md:w-[90%] lg:w-[900px] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-0'>
           <FAQList />
         </div>
-
-        {/* Bottom Section */}
-        <p className='text-[#001844] text-lg text-center mt-12'>
-          Si no encuentras lo que buscas, no dudes en{' '}
-          <a href="#" className='underline text-[#001844]'>
-            contactárnos
-          </a>
-          {' '}directamente
-        </p>
       </section>
 
       {/* Hero - Footer: ¿Listo para automatizar tus procesos de forma conversacional? */}
@@ -573,9 +565,6 @@ export const HomePage = () => {
               </div>
               <img src={hoktusWhatsapp} alt="Hoktus Logo" className='h-[30px] sm:h-[40px]' />
             </div>
-            <button className='bg-white text-[#000E2] h-[40px] sm:h-[46px] w-[160px] sm:w-[175px] rounded-[24.5px] flex items-center justify-center font-normal text-sm sm:text-base lg:text-lg mt-0 sm:mt-10'>
-              Agendar reunión
-            </button>
           </div>
         </div>
 
@@ -626,14 +615,14 @@ export const HomePage = () => {
         </div>
 
         <div className='flex flex-col w-[90%] py-4 gap-4'>
-        <input
-          type='email'
-          placeholder='Correo electrónico'
-          className='bg-transparent border border-[#FFFFFF] text-white px-4 py-3 rounded-lg focus:outline-none focus:border-[#1677FF] placeholder:text-gray-400 rounded-[24.5px]'
-        />
-        <button className='bg-white text-[#01122D] text-light rounded-[24.5px] w-full h-[46px] flex items-center justify-center'>
-          Suscribirme
-        </button>
+          <input
+            type='email'
+            placeholder='Correo electrónico'
+            className='bg-transparent border border-[#FFFFFF] text-white px-4 py-3 rounded-lg focus:outline-none focus:border-[#1677FF] placeholder:text-gray-400 rounded-[24.5px]'
+          />
+          <button className='bg-white text-[#01122D] text-light rounded-[24.5px] w-full h-[46px] flex items-center justify-center'>
+            Suscribirme
+          </button>
         </div>
 
         {/* Bottom Copyright Section */}
