@@ -256,14 +256,13 @@ export const HomePage = () => {
 
         {/* Hero Content - Centrado verticalmente con mejor distribución */}
         <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-8 sm:gap-5 md:gap-6 lg:gap-8 text-center text-white items-center flex-1 justify-center px-4 sm:px-6'>
-          <h1 className='font-cal-sans text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2'>
-            Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos, no semanas
+          <h1 className='font-cal-sans text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2 w-[78%]'>
+            Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos,  <br />
+            no semanas
           </h1>
-          <p className='font-satoshi font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 block md:hidden'>
-            Automatiza el reclutamiento con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span> sin sumar carga a tu equipo
-          </p>
-          <p className='font-satoshi font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 hidden md:block'>
-            Automatiza el reclutamiento y todos sus procesos administrativos por WhatsApp con <span className='text-[#1677FF] font-bold italic'>IA conversacional</span>, sin sumar carga a tu equipo
+
+          <p className='font-satoshi font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 block md:hidden w-[80%]'>
+            Automatiza el reclutamiento con <span className='font-bold italic'>IA conversacional</span> sin sumar carga a tu equipo
           </p>
           <button className='flex items-center justify-center mt-6 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-6 xl:px-6 py-3 sm:py-4 md:py-5 lg:py-3 xl:py-4 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[220px] xl:w-[250px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[44px] xl:h-[50px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[22px] xl:rounded-[25px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-[#1677FF] font-semibold text-center'>
             Agendar demo
@@ -281,7 +280,8 @@ export const HomePage = () => {
         </p>
 
         {/* Images content */}
-        <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden lg:overflow-visible h-auto mt-5 gap-[150px]">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden overflow-visible h-auto mt-5 gap-[150px]">
+          <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute top-[990px] left-5 z-0 left-0' />
           {/* Left Section - Woman with UI elements */}
           <div className="relative w-auto min-w-[425px]">
             {/* Floating UI Element 1 - Performance (detrás de person) */}
