@@ -331,7 +331,7 @@ export const HomePage = () => {
                 Conectados con tus sistemas
               </h2>
               <p className="font-satoshi text-gray-600 sm:text-[15px] leading-relaxed text-center w-[85%] sm:w-full sm:text-center">
-              Integramos tus plataformas mediante APIs seguras, garantizando eficiencia y continuidad operativa.
+                Integramos tus plataformas mediante APIs seguras, garantizando eficiencia y continuidad operativa.
               </p>
             </div>
           </div>
@@ -364,7 +364,7 @@ export const HomePage = () => {
           </div>
 
           {/* Layout normal en sm y superior (≥ 640px) - Todas en una línea */}
-          <div className='hidden sm:flex items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 w-full px-4 sm:px-6 lg:px-0 overflow-x-auto'>
+          <div className='hidden sm:flex items-center justify-center gap-3 sm:gap-[50px] w-full px-4 sm:px-6 lg:px-0 overflow-x-auto'>
             {cards.map((card, index) => (
               <div key={index} className='flex justify-center flex-shrink-0'>
                 <Card bg={card} />
@@ -393,7 +393,7 @@ export const HomePage = () => {
       </section>
 
       {/* Los números hablan solos */} {/* Responsive */}
-      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-[93%] p-4 mt-10 w-[85%] sm:w-[90%] pb-6'>
+      <section className='bg-gradient-to-b from-[#01122D] to-[#002259] rounded-[20px] sm:rounded-[30px] flex flex-col items-center justify-start w-[93%] p-4 mt-10 w-[85%] sm:w-[90%] pb-6 sm:pb-[50px]'>
         <h2 className='font-cal-sans text-[40px] text-[#FFFFFF] font-bold text-center w-full pt-8 pb-10' style={{ lineHeight: '1.2' }}>
           Los números <span className='text-[#1677FF]'>hablan</span>
         </h2>
@@ -475,20 +475,20 @@ export const HomePage = () => {
       <section className='w-full h-[510px] sm:h-[350px] sm:w-[90%] sm:rounded-[40px] mt-[10px] sm:mt-20'>
         {/* <img src={stars} alt="Stars icon" className='absolute z-10 h-[25px] left-[20px] mt-8 sm:mt-5 sm:left-[90px]' /> */}
         <div className='flex flex-col items-center justify-center absolute z-10'>
-          <p className='font-cal-sans text-[#1677FF] text-[33px] mt-[70px] text-center w-[80%] font-bold sm:text-[30px] sm:w-[330px] sm:ml-[120px] sm:text-start'>
+          <p className='font-cal-sans text-[#1677FF] text-[33px] mt-[70px] text-center w-[80%] font-bold sm:text-[40px] sm:w-[600px] sm:ml-[120px] sm:text-start'>
             Empieza a contratar en minutos.
           </p>
         </div>
 
-        <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] object-cover absolute transform z-[9999] mt-[350px] left-5 absolute sm:mt-[170px] sm:ml-[350px]' />
+        <img src={chatSimulation} alt="Chat Simulation" className='w-[180px] sm:w-[280px] object-cover absolute transform z-[9999] mt-[350px] absolute sm:mt-[170px] sm:ml-[200px]' />
 
         <div className='z-10 mt-[30px] sm:mt-[-125px] relative'>
-        <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute bottom-[-480px] left-5 z-0 left-0 z-[-1]' />
-          <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[15px]' />
+          <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute bottom-[-480px] left-5 z-0 left-0 z-[-1] sm:left-10 sm:w-[93%] sm:h-[300px]'/>
+          <img src={person2} alt="Professional woman" className='w-[310px] object-contain absolute mt-[170px] right-[15px] sm:right-[40px] sm:top-[-90px] sm:w-[400px]' />
         </div>
       </section>
 
-      <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center py-2 gap-3 sm:ml-[120px] sm:mt-[80px] my-10'>
+      <button className='bg-[#1677FF] text-white px-4 rounded-[20px] font-semibold hover:bg-[#0050CC] w-[180px] flex items-center justify-center py-2 gap-3 sm:ml-[120px] sm:relative sm:bottom-[150px] my-10'>
         Probar Hoktus
         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

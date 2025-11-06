@@ -1,19 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/cal-sans@latest/index.css');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  @font-face {
-    font-family: 'Cal Sans';
-    src: url('https://cal.com/fonts/CalSans-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-}
 
 @layer utilities {
   .scrollbar-hide {

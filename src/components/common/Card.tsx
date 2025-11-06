@@ -17,7 +17,7 @@ interface StatisticsCardProps {
  */
 export function Card({ bg }: CardProps): ReactElement {
   return (
-    <div className='w-[290px] sm:w-[270px] h-[420px] sm:h-[400px] bg-[#EBF3FF] rounded-[16px] border border-[#9B9B9B]/20 p-3'>
+    <div className='w-[290px] h-[420px] sm:w-[220px] sm:h-[330px] bg-[#EBF3FF] rounded-[16px] border border-[#9B9B9B]/20 p-3'>
       <img src={bg} alt="background" className='w-full h-full object-cover rounded-[12px] lg:rounded-lg' />
     </div>
   )
@@ -97,7 +97,7 @@ export function PlanCard({
 }: PlanCardProps): ReactElement {
   return (
     <div className='border-[3px] sm:border-[4px] lg:border-[5px] border-[#B0D1FF] rounded-[20px] sm:rounded-[25px] p-6 sm:p-7 w-full
-     h-auto flex flex-col sm:min-h-[1040px] items-start relative' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
+     h-auto flex flex-col sm:min-h-[920px] items-start relative' style={{ background: isPopular ? '#012257' : '#0048BE' }}>
       {isPopular && (
         <div className='absolute top-[-17px] sm:-top-4 left-1/2 transform -translate-x-1/2 bg-[#012257] border-[2px] sm:border-[3px] border-[#B0D1FF] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full flex items-center justify-center'>
           <span className='text-white text-xs sm:text-sm font-semibold'>Mas popular</span>
@@ -111,7 +111,7 @@ export function PlanCard({
       )}
 
       <div className='flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 flex-1 items-start w-full'>
-        <div className='flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-4 w-full'>
+        <div className='flex flex-col gap-3 sm:gap-4 w-full'>
           <h2 className='text-white text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-bold'>{title}</h2>
 
           {isRequestQuote ? (
@@ -123,10 +123,12 @@ export function PlanCard({
             </div>
           )}
 
-          <p className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] h-auto sm:h-[40px] lg:h-[46px]'>{description}</p>
+          <div className='flex flex-col h-auto items-start justify-start h-[60px]'>
+            <p className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px]'>{description}</p>
+          </div>
         </div>
 
-        <div className='flex flex-col gap-3 sm:gap-4 w-full flex-1'>
+        <div className='flex flex-col gap-3 sm:gap-4 w-full'>
           <div className='flex flex-col gap-2'>
             <h3 className='text-[#FFFFFF] text-sm sm:text-base md:text-lg lg:text-[18px] font-light uppercase'>Funcionalidades</h3>
             <div className='h-[1px] bg-[#FFFFFF]'></div>
@@ -150,7 +152,7 @@ export function PlanCard({
                 {additionals.map((additional, index) => (
                   <div
                     key={index}
-                    className='flex flex-col items-center justify-center bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] px-0 py-2 text-start sm:w-[100px] sm:flex-col sm:items-center sm:pl-0 w-[163.5px] h-[75px]'
+                    className='flex flex-col items-center justify-center bg-[#215FC4] border-[1px] border-[#DBE9FF]/20 rounded-[8px] px-0 py-2 text-start sm:w-[253px] sm:flex-col sm:items-center sm:pl-0 w-[163.5px] h-[75px]'
                   >
                     <span className='text-[12px] text-[#FFFFFF] text-center'>{additional.text}</span>
                     {subtext && subtext[index] && (
@@ -164,14 +166,16 @@ export function PlanCard({
         </div>
       </div>
 
-      <button
-        className={`w-full sm:w-[160px] lg:w-[172px] self-end py-2.5 sm:py-3 px-5 sm:px-6 rounded-[24px] sm:rounded-[30px] min-h-[50px] sm:min-h-[56px] lg:min-h-[60px] h-auto sm:h-[56px] lg:h-[60px] font-semibold text-sm sm:text-base transition-colors mt-4 sm:mt-6 lg:mt-8 flex items-center justify-center ${isPopular
-          ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
-          : 'bg-[#FFFFFF] text-[#0048BE]'
-          }`}
-      >
-        {ctaText}
-      </button>
+      <div className='flex flex-col gap-3 sm:gap-4 w-full'>
+        <button
+          className={`w-full sm:w-[160px] lg:w-[172px] self-end py-2.5 sm:py-3 px-5 sm:px-6 rounded-[24px] sm:rounded-[30px] min-h-[50px] sm:min-h-[56px] lg:min-h-[60px] h-auto sm:h-[56px] lg:h-[60px] font-semibold text-sm sm:text-base transition-colors mt-4 sm:mt-6 lg:mt-8 flex items-center justify-center ${isPopular
+            ? 'bg-[#0048BE] border-[2px] border-[#FFFFFF]/20 text-[#FFFFFF]'
+            : 'bg-[#FFFFFF] text-[#0048BE]'
+            }`}
+        >
+          {ctaText}
+        </button>
+      </div>
     </div>
   );
 }
