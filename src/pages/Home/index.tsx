@@ -22,7 +22,6 @@ import performanceChart from '@/assets/performance-chart.png';
 import matias from '@/assets/maatias.png';
 import reciclapp from '@/assets/reciclapp.png';
 const icons = [goingUp, clock, persons, chat, clock, circles];
-import hoktusWhatsapp from '@/assets/hoktus-white.png';
 
 interface FAQItemProps {
   question: string;
@@ -272,7 +271,7 @@ export const HomePage = () => {
 
       {/* Porque Hoktus?*/} {/* Responsive */}
       <section className='flex flex-col items-center justify-center gap-6 py-[50px]'>
-        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[14px] font-[400]'>
+        <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[14px] font-[400] sm:text-[20px] sm:font-[500]'>
           Por qué Hoktus
         </button>
         <p className='font-cal-sans text-[28px] w-[85%] sm:text-[30px] font-semibold text-[#012257] text-center px-4'>
@@ -281,24 +280,24 @@ export const HomePage = () => {
 
         {/* Images content */}
         <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden overflow-visible h-auto mt-5 gap-[150px]">
-          <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute top-[990px] left-5 z-0 left-0' />
+          <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute top-[990px] left-5 z-0 left-0 md:top-[1195px] md:left-10 md:w-[95%]' />
           {/* Left Section - Woman with UI elements */}
           <div className="relative w-auto min-w-[425px]">
             {/* Floating UI Element 1 - Performance (detrás de person) */}
             <img
               src={performanceChart}
               alt="Performance"
-              className="absolute top-0 left-[0px] w-[190px] sm:w-[250px] sm:left-[300px] z-0 object-cover"
+              className="absolute top-0 left-[0px] w-[190px] sm:w-[250px] sm:left-[300px] z-0 object-cover sm:left-[100px]"
             />
 
             <img
               src={person}
               alt="Persona usando Hoktus"
-              className="relative w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] z-10 object-contain sm:object-cover"
+              className="relative w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] z-10 object-contain sm:object-cover sm:left-[180px]"
             />
 
             {/* Floating UI Element 2 - Postulante Chat */}
-            <div className="absolute top-[250px] right-[30px] sm:top-[200px] md:top-[250px] lg:top-[300px] sm:right-[-50px] md:right-[-70px] lg:right-[-140px] z-10 w-[200px] sm:w-[150px] md:w-[190px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-2 text-[#1677FF]">
+            <div className="absolute top-[250px] right-[30px] sm:right-[-180px] sm:top-[250px] z-10 w-[200px] sm:w-[150px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-2 text-[#1677FF]">
               <h3 className="font-cal-sans font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
               <p className="font-satoshi text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
             </div>
@@ -306,8 +305,8 @@ export const HomePage = () => {
 
           <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
             {/* Middle Section - Recruitment Card */}
-            <div className="flex flex-col items-center justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg py-6 px-[15px] sm:p-8 w-[83%] sm:w-[90%] h-auto mb-10">
-              {/* <img src={starsIcon} alt="Performance" className="w-8 h-8 sm:w-10 sm:h-10 mb-4 sm:mb-6" /> */}
+            <div className="flex flex-col items-center justify-between bg-[#ECF4FF] rounded-[20px] 
+                    shadow-lg py-6 px-[15px] sm:p-8 w-[83%] h-auto mb-10 sm:h-[400px] sm:w-[30%] sm:mb-0">
               <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-center">
                 Recluta más rápido con Hoktus AI
               </h2>
@@ -320,16 +319,16 @@ export const HomePage = () => {
             </div>
 
             {/* Right Section - Systems Connection Card */}
-            <div className="flex flex-col items-center bg-white rounded-[20px] shadow-lg p-6 sm:p-8 w-full sm:w-[90%] md:w-[85%] lg:max-w-[420px] h-auto lg:h-[464px]">
+            <div className="flex flex-col items-center bg-white rounded-[20px] shadow-lg p-6 w-full h-auto sm:h-[400px] sm:w-[30%]">
               <img
                 src={sysConected}
                 alt="Conectados con tus sistemas"
-                className="w-full h-auto sm:h-[200px] md:h-[250px] lg:h-full object-cover rounded-lg mb-7 sm:mb-0"
+                className="w-full h-auto sm:h-[200px] object-cover rounded-lg mb-7 sm:mb-0"
               />
-              <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-start">
+              <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 text-start sm:text-[20px] sm:w-full sm:text-center sm:font-[500]">
                 Conectados con tus sistemas
               </h2>
-              <p className="font-satoshi text-gray-600 text-base sm:text-[18px] leading-relaxed text-center w-[85%] sm:w-[290px]">
+              <p className="font-satoshi text-gray-600 sm:text-[15px] leading-relaxed text-center w-[85%] sm:w-full sm:text-center">
               Integramos tus plataformas mediante APIs seguras, garantizando eficiencia y continuidad operativa.
               </p>
             </div>
@@ -338,7 +337,7 @@ export const HomePage = () => {
       </section>
 
       {/* Automatiza tu reclutamiento, sin importar la industria */} {/* Responsive */}
-      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] flex flex-col items-center justify-start w-full sm:w-[95%] px-2'>
+      <section className='bg-gradient-to-tl from-[#FFFFFF] to-[#E9F2FF] flex flex-col items-center justify-start w-full sm:w-[95%] px-2 sm:px-4 lg:rounded-[30px]'>
         <h2 className='font-cal-sans text-[22px] mt-7 text-[#05234F] font-bold text-center w-[85%] px-4 pt-6'>
           Automatiza tu reclutamiento, sin importar la industria
         </h2>
