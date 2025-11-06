@@ -270,7 +270,7 @@ export const HomePage = () => {
       </section>
 
       {/* Porque Hoktus?*/} {/* Responsive */}
-      <section className='flex flex-col items-center justify-center gap-6 py-[50px]'>
+      <section className='flex flex-col items-center justify-center gap-6 py-[50px] sm:flex-col'>
         <button className='w-auto px-4 py-3 rounded-[28px] bg-[#ECF4FF] text-[#1677FF] text-[14px] font-[400] sm:text-[20px] sm:font-[500]'>
           Por qué Hoktus
         </button>
@@ -279,34 +279,36 @@ export const HomePage = () => {
         </p>
 
         {/* Images content */}
-        <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden overflow-visible h-auto mt-5 gap-[150px]">
-          <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute top-[990px] left-5 z-0 left-0 md:top-[1195px] md:left-10 md:w-[95%]' />
+        <div className="flex flex-col lg:flex-row items-center justify-center w-auto overflow-x-hidden overflow-visible h-auto mt-5 gap-[150px] sm:flex-col sm:h-[600px]">
+          <div className='bg-[#c7dcff]/20 w-[90%] h-[300px] rounded-[20px] p-4 z-0 absolute top-[990px] left-5 z-0 left-0 md:left-10 sm:top-[1400px]' />
           {/* Left Section - Woman with UI elements */}
           <div className="relative w-auto min-w-[425px]">
             {/* Floating UI Element 1 - Performance (detrás de person) */}
             <img
               src={performanceChart}
               alt="Performance"
-              className="absolute top-0 left-[0px] w-[190px] sm:w-[250px] sm:left-[300px] z-0 object-cover sm:left-[100px]"
+              className="absolute top-0 left-[0px] w-[190px] sm:w-[250px] sm:left-[30px] sm:top-[10px] z-0 object-cover sm:left-[100px]"
             />
 
             <img
               src={person}
               alt="Persona usando Hoktus"
-              className="relative w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] z-10 object-contain sm:object-cover sm:left-[180px]"
+              className="relative w-[400px] h-[400px] sm:w-[465px] sm:h-[465px] z-10 object-contain sm:object-cover sm:left-[100px] sm:top-[-50px]"
             />
 
             {/* Floating UI Element 2 - Postulante Chat */}
-            <div className="absolute top-[250px] right-[30px] sm:right-[-180px] sm:top-[250px] z-10 w-[200px] sm:w-[150px] lg:w-[235.47px] h-auto sm:h-[60px] md:h-[68px] lg:h-[73.83px] bg-white rounded-tl-[12px] sm:rounded-tl-[16px] lg:rounded-tl-[20px] rounded-tr-[12px] sm:rounded-tr-[16px] lg:rounded-tr-[20px] rounded-br-[12px] sm:rounded-br-[16px] lg:rounded-br-[20px] shadow-lg p-2 text-[#1677FF]">
+            <div className="absolute top-[250px] right-[30px] z-10 w-[200px] h-auto rounded-tl-[12px] bg-white rounded-br-[12px] rounded-tr-[12px] shadow-lg p-2 text-[#1677FF]
+                            sm:right-[-130px] sm:top-[220px] sm:h-[60px] sm:rounded-tl-[16px] sm:w-[150px] sm:rounded-br-[16px] sm:rounded-tr-[16px] sm:w-[250px] sm:h-[80px] sm:p-6
+                            sm:flex sm:items-start sm:justify-center sm:flex-col">
               <h3 className="font-cal-sans font-semibold text-xs sm:text-sm lg:text-[15px]">Postulante</h3>
               <p className="font-satoshi text-[10px] sm:text-[11px] lg:text-[12px]">Hola Daniel, estoy interesado en el puesto de conductor, ¿Qué debo...</p>
             </div>
           </div>
 
-          <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto'>
+          <div className='flex flex-col sm:flex-col lg:flex-col xl:flex-row items-center justify-center gap-6 sm:gap-6 lg:gap-8 w-full lg:w-auto sm:flex-col'>
             {/* Middle Section - Recruitment Card */}
-            <div className="flex flex-col items-center justify-between bg-[#ECF4FF] rounded-[20px] 
-                    shadow-lg py-6 px-[15px] sm:p-8 w-[83%] h-auto mb-10 sm:h-[400px] sm:w-[30%] sm:mb-0">
+            <div className="flex flex-col items-center justify-between bg-[#ECF4FF] rounded-[20px] shadow-lg py-6 px-[15px] h-auto mb-10 w-[83%]
+                    sm:p-8 sm:h-[400px] sm:w-[300px] sm:top-[0px] sm:mb-0 sm:relative sm:bottom-[-500px]">
               <h2 className="font-cal-sans text-[#1677FF] font-bold text-xl sm:text-2xl mb-3 sm:mb-4 text-center">
                 Recluta más rápido con Hoktus AI
               </h2>
@@ -319,7 +321,7 @@ export const HomePage = () => {
             </div>
 
             {/* Right Section - Systems Connection Card */}
-            <div className="flex flex-col items-center bg-white rounded-[20px] shadow-lg p-6 w-full h-auto sm:h-[400px] sm:w-[30%]">
+            <div className="flex flex-col items-center bg-white rounded-[20px] shadow-lg p-6 w-full h-auto sm:h-[400px] sm:w-[30%] bg-white z-[10]">
               <img
                 src={sysConected}
                 alt="Conectados con tus sistemas"
