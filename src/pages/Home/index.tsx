@@ -254,13 +254,12 @@ export const HomePage = () => {
         </div>
 
         {/* Hero Content - Centrado verticalmente con mejor distribución */}
-        <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-8 sm:gap-5 md:gap-6 lg:gap-8 text-center text-white items-center flex-1 justify-center px-4 sm:px-6'>
-          <h1 className='font-cal-sans text-[32px] sm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-bold leading-[1.2] sm:leading-[1.15] md:leading-tight px-2 w-[78%]'>
-            Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos,  <br />
-            no semanas
+        <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[75%] flex flex-col gap-8 sm:gap-10 text-center text-white items-center flex-1 justify-center px-4'>
+          <h1 className='font-cal-sans text-[32px] sm:text-[60px] font-[200] md:leading-tight w-[78%] sm:w-[65%]'>
+            Contrata a las <span className='text-[#1677FF]'>personas correctas</span> en minutos, no semanas
           </h1>
 
-          <p className='font-satoshi font-[100] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] 2xl:text-[33px] max-w-[1100px] leading-relaxed px-2 block md:hidden w-[80%]'>
+          <p className='font-satoshi font-[50] text-base sm:text-[29px] display-none md:block'>
             Automatiza el reclutamiento con <span className='font-bold italic'>IA conversacional</span> sin sumar carga a tu equipo
           </p>
           <button className='flex items-center justify-center mt-6 sm:mt-4 md:mt-6 lg:mt-8 px-6 sm:px-8 md:px-10 lg:px-6 xl:px-6 py-3 sm:py-4 md:py-5 lg:py-3 xl:py-4 w-[90%] sm:w-auto sm:min-w-[280px] md:min-w-[320px] lg:w-[220px] xl:w-[250px] h-[50px] sm:h-[56px] md:h-[64px] lg:h-[44px] xl:h-[50px] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] lg:rounded-[22px] xl:rounded-[25px] bg-[#FFFFFF] text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl text-[#1677FF] font-semibold text-center'>
